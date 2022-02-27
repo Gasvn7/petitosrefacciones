@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a Petitos Shop</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/img/">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c328687099.js" crossorigin="anonymous"></script>
+    <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <%- include('partials/header') %>
+        <main class="products-home">
+            <!-------------------------------SECCIONES POR MASCOSTAS------------------------------------>
+
+            <!--PRODUCTOS----------------->
+            <section class="lo-destacado">
+                <h3>LO DESTACADO</h3>
+                <div class="productos">
+                    <div class="cuerpo-tarjeta">
+                        <div class="foto">
+                            <img src="/img/collares/collar 7.JPG" alt="">
+                        </div>
+                        <div class="descripcion">
+                            <b>Producto</b><br>
+                            $$$$$$</br>
+                            <br>
+                            <a class="comprar" href="/">Comprar</a>
+                            <a class="ver" href="/products/detalles">Ver</a>
+                        </div>
+                    </div>
+                    <div class="productos">
+                        <div class="cuerpo-tarjeta">
+                            <div class="foto">
+                                <img src="/img/ropa/ropa 3.JPG" alt="">
+                            </div>
+                            <div class="descripcion">
+                                <b>Producto</b><br>
+                                $$$$$$</br>
+                                <br>
+                                <a class="comprar" href="#">Comprar</a>
+                                <a class="ver" href="#">Ver</a>
+                            </div>
+                        </div>
+                        <div class="productos">
+                            <div class="cuerpo-tarjeta">
+                                <div class="foto">
+                                    <img src="/img/cuchas/cucha 4.JPG" alt="">
+                                </div>
+                                <div class="descripcion">
+                                    <b>Producto</b><br>
+                                    $$$$$$</br>
+                                    <br>
+                                    <a class="comprar" href="#">Comprar</a>
+                                    <a class="ver" href="#">Ver</a>
+                                </div>
+                            </div>
+                            <div class="productos">
+                                <div class="cuerpo-tarjeta">
+                                    <div class="foto">
+                                        <img src="/img/collares/pretal 3.JPG" alt="">
+                                    </div>
+                                    <div class="descripcion">
+                                        <b>Producto</b><br>
+                                        $$$$$$</br>
+                                        <br>
+                                        <a class="comprar" href="#">Comprar</a>
+                                        <a class="ver" href="#">Ver</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ofertas">
+                <h3>OFERTAS</h3>
+                <div class="productos">
+                    <div class="cuerpo-tarjeta">
+                        <div class="foto">
+                            <img src="/img/ropa/ropa 12.JPG" alt="">
+                        </div>
+                        <div class="descripcion">
+                            <b>Producto</b><br>
+                            $$$$$$</br>
+                            <br>
+                            <a class="comprar" href="#">Comprar</a>
+                            <a class="ver" href="#">Ver</a>
+                        </div>
+                    </div>
+                    <div class="productos">
+                        <div class="cuerpo-tarjeta">
+                            <div class="foto">
+                                <img src="/img/cuchas/cucha 2.JPG" alt="">
+                            </div>
+                            <div class="descripcion">
+                                <b>Producto</b><br>
+                                $$$$$$</br>
+                                <br>
+                                <a class="comprar" href="#">Comprar</a>
+                                <a class="ver" href="#">Ver</a>
+                            </div>
+                        </div>
+                        <div class="productos">
+                            <div class="cuerpo-tarjeta">
+                                <div class="foto">
+                                    <img src="/img/collares/collar 6.JPG" alt="">
+                                </div>
+                                <div class="descripcion">
+                                    <b>Producto</b><br>
+                                    $$$$$$</br>
+                                    <br>
+                                    <a class="comprar" href="#">Comprar</a>
+                                    <a class="ver" href="#">Ver</a>
+                                </div>
+                            </div>
+                            <div class="productos">
+                                <div class="cuerpo-tarjeta">
+                                    <div class="foto">
+                                        <img src="/img/ropa/ropa 11.JPG" alt="">
+                                    </div>
+                                    <div class="descripcion">
+                                        <b>Producto</b><br>
+                                        $$$$$$</br>
+                                        <br>
+                                        <a class="comprar" href="#">Comprar</a>
+                                        <a class="ver" href="#">Ver</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            </section>
+        </main>
+        <!--CORREO-------------------------------------------------->
+        <section class="correo">
+            <div class="caja-correo">
+                <h3>RECIBI TODAS LAS OFERTAS</h3>
+                <p>¿Quieres recibir nuestras ofertas? ¡Registrate ya mismo y comenzá a disfrutarlas!</p>
+                <div class="email-formpart">
+                    <form class="form-email" action="" method="GET">
+                        <input type="email" name="correo" class="input" id="correo" placeholder="Tu email">
+                        <button type="submit" class="submit"><i class="fas fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- Swiper JS -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                slidesPerGroup: 3,
+                loop: true,
+                loopFillGroupWithBlank: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+        </script>
+</body>
+
+</html>

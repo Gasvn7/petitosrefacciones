@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Formulario Login</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/c328687099.js" crossorigin="anonymous"></script>
+  <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <%- include('partials/header') %>
+    <!----Formulario-login-->
+    <main class="main-register-login">
+      <form action="action_page.php" class="form-login">
+        <div class="container">
+          <h1>Ingresa</h1>
+          <p>Por favor complete el formulario para ingresar.</p>
+          <hr>
+
+          <label for="email"><b>Ingresa tu Email</b></label>
+          <input class="input" type="text" placeholder="Ingresa tu email" name="email" required>
+
+          <label for="psw"><b>Contraseña</b></label>
+          <input class="input" type="password" placeholder="Ingresa tu contraseña" name="psw" required>
+
+          <div class="clearfix">
+            <button class="login-button" type="submit" value="Iniciar sesión" name="">
+              Iniciar sesión
+              <span class="js-form-spinner" style="display:none;"> <svg class="icon-inline icon-spin h5"
+                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path
+                    d="M288 24.103v8.169a11.995 11.995 0 0 0 9.698 11.768C396.638 63.425 472 150.461 472 256c0 118.663-96.055 216-216 216-118.663 0-216-96.055-216-216 0-104.534 74.546-192.509 174.297-211.978A11.993 11.993 0 0 0 224 32.253v-8.147c0-7.523-6.845-13.193-14.237-11.798C94.472 34.048 7.364 135.575 8.004 257.332c.72 137.052 111.477 246.956 248.531 246.667C393.255 503.711 504 392.789 504 256c0-121.187-86.924-222.067-201.824-243.704C294.807 10.908 288 16.604 288 24.103z">
+                  </path>
+                </svg>
+              </span>
+            </button>
+            <a href="/users/register" class="register-button">
+              Registrarme
+            </a>
+          </div>
+        </div>
+      </form>
+    </main>
+</body>
+
+</html>

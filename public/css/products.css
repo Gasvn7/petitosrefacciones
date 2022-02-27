@@ -1,0 +1,80 @@
+.main-products{
+    margin-top:100px;
+    margin-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+.product-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+/*DETALLES DE PRODUCTO*/
+.description {
+    display:flex;
+    flex-direction: column;
+}
+.description img{
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+}
+.description span{
+    opacity: 0.8;
+    font-size: 14px;
+}
+/*PRECIO Y STORE*/
+.details{
+    display:flex;
+    flex-direction: column;
+    align-content: flex-start;
+    width: 30%;
+}
+.details a{
+    color: #292425;
+}
+.store a{
+    opacity: 0.6;
+    text-decoration: none;
+    color: #393334;
+    font-size: 15px;
+    transition: all 0.50s;
+}
+.store a:hover{
+    opacity:1;
+}
+.store .divider {
+    margin: 4px;
+}
+.details h4{
+    font-weight:normal;
+}
+.details .details-cuotas,.guide-sizes {
+    padding-top: 5px;
+    text-decoration: none;
+    font-size: 13px;
+    transition: all 0.50s;
+}
+.details .details-cuotas:hover,.guide-sizes:hover{
+    opacity:0.5;
+}
+.details .cuotes,.form{
+    font-size: var(--text);
+    padding-top: 10px;
+}
+.details .form select {
+    margin-top: 10px;
+    padding-left: 10px;
+    height: 50px;
+    width: 150px;
+    border-radius: 15px;
+    font-size: 16px;
+    opacity: 0.5;
+    border: 1.5px solid rgb(85, 85, 85);
+    transition: all 0.50s;
+}
+.details .form select:hover{
+    opacity: 1;
+}

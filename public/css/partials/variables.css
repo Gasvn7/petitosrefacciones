@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+:root {
+    --body-color: #E4E9F7;
+    --nav-color: #4070F4;
+    --side-color: #010718;
+    --text-color: #FFF;
+    --search-bar: #F2F2F2;
+    --search-text: #0101718;
+    /*Fuente*/
+    --rowdies: 'Rowdies', cursive;
+    /*Tamaños*/
+    --text-sl: 10px;
+    --text: 14px;
+    --text-md: 18px;
+    --text-lg: 22px;
+}

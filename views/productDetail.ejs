@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto X</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/img/">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c328687099.js" crossorigin="anonymous"></script>
+    <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <%- include('partials/header') %>
+        <!--------PRODUCTOS----------->
+        <main class="main-products">
+            <div class="product-container">
+                <div class="description">
+                    <img src="/img/collares/collar 7.JPG" alt="">
+                    <h4>CARACTERISTICAS</h4>
+                    <ul>
+                        <li>
+                            <span>Hecho con cuero de vaca del olimpo</span>
+                        </li>
+                        <li>
+                            <span>Confeccionado a mano por elfos de Hungria</span>
+                        </li>
+                        <li>
+                            <span>Con esto tu perrito domará a cualquier perra</span>
+                        </li>
+                    </ul>
+                </div>
+                <section class="details">
+                    <div class="store">
+                        <a href="">Inicio</a>
+                        <span class="divider">></span>
+                        <a href="">PERROS</a>
+                        <span class="divider">></span>
+                        <a href="">COSMETICOS</a>
+                        <span class="divider">></span>
+                        <a href="">COLLARES</a>
+                    </div>
+                    <h1>COLLAR BDSM BLUETOOTH</h1>
+                    <h3>$8.000.000</h3>
+                    <span class="cuotes"><span>700</span> cuotas de <span>$10.002</span></span>
+                    <a class="details-cuotas" href="/cuotes"><span>Ver más detalles</span></a>
+                    <form action="" class="form">
+                        <label for="size">Talle</label><br>
+                        <select name="size" id="size">
+                            <option value="S">S</option>
+                            <option value="SM">SM</option>
+                            <option value="M">M</option>
+                            <option value="ML">ML</option>
+                            <option value="L">L</option>
+                        </select>
+                    </form>
+                    <a class="guide-sizes" href="/guide-sizes"><span>Guía de talles </span></a>
+                </section>
+            </div>
+        </main>
+</body>
+
+</html>
