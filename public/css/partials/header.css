@@ -69,6 +69,7 @@ nav .nav-bar .logo a {
 .nav-bar .conteiner-searchBox{
     display:flex;
     align-items: center;
+    margin-right: 45px;
 }
 .conteiner-searchBox .searchToggle{
     height: 40px;
@@ -154,12 +155,24 @@ nav .nav-bar .logo a {
     font-size: 22px;
     cursor: pointer; 
 }
+.container-search .search{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.search .bx-search{
+    font-size: 35px;
+    color: var(--text-color);
+}
 
 
 
 
 
-@media (max-width: 790px){
+@media (max-width: 822px){
+    .container-search{
+        display: none;
+    }
     nav .nav-bar .sidebarOpen{
         display:block;
     }
