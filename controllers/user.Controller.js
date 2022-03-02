@@ -5,6 +5,12 @@ const userController = {
     },
     login: function (req, res) {
         res.render('login.ejs');
+    },
+    newprdct: function (req, res) {
+        res.render('newprdct.ejs');
+    },
+    editprdct: function (req, res) {
+        res.render('editprdct.ejs');
     }
 }
 
