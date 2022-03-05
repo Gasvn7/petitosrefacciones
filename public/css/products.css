@@ -1,4 +1,6 @@
 .main-products{
+    display:flex;
+    justify-content: center;
     margin-top:100px;
     margin-bottom: 40px;
     padding-left: 15px;
@@ -9,17 +11,33 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 100%;
+    padding: 15px 0;
+    background-color: white;
 }
 /*DETALLES DE PRODUCTO*/
 .description {
     display:flex;
     flex-direction: column;
 }
-.description img{
+.product-views{
+    display:flex;
+    flex-direction: column;
+}
+.product-views img{
+    height: 100px;
+    width: 100px;
+    margin-top: 9px;    
+    border: 1px solid rgba(128, 128, 128, 0.472);
+}
+.product-views img:hover{
+    cursor: pointer;
+    border: 1px solid brown;
+}
+.description .product-img{
     width: auto;
     height: 100%;
     max-width: 100%;
+    cursor:zoom-in;
 }
 .description span{
     opacity: 0.8;
@@ -29,52 +47,129 @@
 .details{
     display:flex;
     flex-direction: column;
-    align-content: flex-start;
-    width: 30%;
+    align-items: flex-start;
+    padding: 15px;
+    width: 35%;
 }
-.details a{
+.details h2{
+    font-size: 25px;
+}
+.links-chain a, .store a{
     color: #292425;
 }
-.store a{
+.links-chain a{
+    width: 50%;
     opacity: 0.6;
     text-decoration: none;
     color: #393334;
     font-size: 15px;
     transition: all 0.50s;
 }
-.store a:hover{
+.links-chain a:hover{
     opacity:1;
 }
-.store .divider {
+.links-chain .divider {
     margin: 4px;
 }
-.details h4{
-    font-weight:normal;
+.details .store .cuotas{
+    display: flex;
+    align-items: flex-start;
+    margin-top: 10px;
 }
-.details .details-cuotas,.guide-sizes {
-    padding-top: 5px;
+.details .store .cuotas i{
+    font-size: 25px;
+    padding-right: 10px;
+}
+.details .store .cuotas .cuotes{
+    font-size: 15px;
+}
+.details .store .details-cuotas,
+.details .store .guide-sizes {
+    padding-top: 10px;
     text-decoration: none;
     font-size: 13px;
     transition: all 0.50s;
 }
-.details .details-cuotas:hover,.guide-sizes:hover{
+.details .store .details-cuotas:hover,
+.details .store .guide-sizes:hover{
     opacity:0.5;
 }
-.details .cuotes,.form{
-    font-size: var(--text);
+.details .store .form{
     padding-top: 10px;
 }
-.details .form select {
+.details .store .form select{
     margin-top: 10px;
     padding-left: 10px;
     height: 50px;
     width: 150px;
-    border-radius: 15px;
     font-size: 16px;
-    opacity: 0.5;
+    opacity: 0.3;
     border: 1.5px solid rgb(85, 85, 85);
     transition: all 0.50s;
 }
-.details .form select:hover{
+.details .store .form select:hover{
     opacity: 1;
+}
+.details .store .add-to-cart{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+}
+.details .store .add-to-cart .minus-plus{
+    display:flex;
+    margin-left:15px;
+    padding: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.52);
+    border-radius: 10px;
+    justify-content: space-between;
+    transition: all 0.5s ease;
+}
+.details .store .add-to-cart .minus-plus:hover{
+    border-color: black;
+}
+.details .store .add-to-cart .minus-plus button {
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.details .store .add-to-cart .minus-plus button:hover{
+    opacity: 0.5;
+}
+.details .store .add-to-cart .minus-plus span {
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor:context-menu;
+}
+.details .store .add-to-cart .add{
+    margin-left:15px;
+    padding: 5px 15px;
+    background-color: black;
+    border-radius: 50px;
+    transition: all 0.5s ease;
+}
+.details .store .add-to-cart .add a{
+    font-size: 15px;
+    padding: 10px 15px;
+    font-weight: lighter;
+    text-decoration: none;
+    color: var(--text-color);
+}
+.details .store .add-to-cart .add:hover{
+    background-color: rgba(128, 128, 128, 0.52);
+}
+
+.details .store .send-methods{
+    display: flex;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+.details .store .send-methods i{
+    font-size: 25px;
+    padding-right: 10px;
+}
+.details .store .send-methods span{
+    font-size: 15px;
 }
