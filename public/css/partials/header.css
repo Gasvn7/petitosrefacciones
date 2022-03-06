@@ -4,6 +4,7 @@ nav .nav-bar{
     max-width: 1000px;
     width: 100%;
     background-color: var(--nav-color);
+    font-family: 'Poppins', sans-serif;
     margin: 0 auto;
     padding: 0 30px;
     display:flex;

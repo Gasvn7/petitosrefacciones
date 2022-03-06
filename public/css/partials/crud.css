@@ -10,9 +10,8 @@
     margin-top: 100px;
 }
 .crud-contanier{
-    background-color: rgba(0, 255, 255, 0.3);
-    border: solid 1px #E4E9F7;
-    border-radius:25px;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
     margin-top: 25px;
     margin-bottom: 50px;
     margin-left: 50px;
@@ -51,6 +50,7 @@
 }
 .crud-details textarea{
     width:100%;
+    outline: none;
 }
 .crud-buttons{
     width: 100%;
@@ -61,12 +61,11 @@
 .crud-buttons button{
     font-size: 15px;
     padding: 15px;
-    border: 1px solid rgba(0, 255, 255,0.1);
+    border: 1px solid rgb(0, 0, 0);
     border-radius: 20px;
     transition: all 0.5s ease;
 }
 .crud-buttons button:hover{
     cursor: pointer;
-    border-color: black;
     background-color: rgba(0, 122, 122,0.3);
 }

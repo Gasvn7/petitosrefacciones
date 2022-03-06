@@ -1,3 +1,4 @@
+
 .main-register-login{
   margin-top:100px;
   display: flex;
@@ -7,10 +8,11 @@
 }
 
 .form-login{
-  align-content: center;
   display: flex;
+  justify-content: center;
+  margin-right: 50px;
 }
-
+ 
 .input{
   border: none;
   border-bottom: 2px solid rgb(2, 2, 2);
@@ -23,6 +25,9 @@
   display: flex;
   flex-direction: column;
   justify-items: center;
+  background-color: white;
+  padding: 45px;
+  border: 2px solid black;
 }
 .clearfix{
   display: flex;

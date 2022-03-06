@@ -1,9 +1,10 @@
 @import url('partials/variables.css');
 @import url('partials/globals.css');
 @import url('partials/header.css');
+@import url('partials/search.css');
 @import url('home.css');
 @import url('login.css');
 @import url('products.css');
 @import url('partials/responsive.css');
-@import url('partials/barrita.css');
 @import url('partials/crud.css');
+@import url('partials/footer.css');

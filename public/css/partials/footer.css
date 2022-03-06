@@ -1,0 +1,12 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    background-color: rgb(83, 83, 83);
+    justify-content: center;
+    align-items: center;
+}
+
+footer h1{
+    color: white;
+}
