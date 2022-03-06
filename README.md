@@ -27,7 +27,7 @@ Gastón Moreno, argentino residente en la provincia de Buenos Aires, técnico el
 - Carrito de compras:https://www.figma.com/proto/Roz5TlRtB0374aj1m6a0G7/Carrito-de-compras?page-id=0%3A1&node-id=2%3A2&viewport=241%2C48%2C0.44&scaling=min-zoom
 
 ## Tableros de trabajo de cada sprint
-- Sprint Nº1: https://6grupo666.atlassian.net/jira/software/projects/G6P/boards/3
+- Tablero Jira: https://6grupo666.atlassian.net/jira/software/projects/G6P/boards/3
 
 ## Referentes
 https://centropet.com -- Diseño de página principal agradable a la vista, funcional y completa con los productos y servicios. 
