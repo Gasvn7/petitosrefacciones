@@ -1,9 +1,7 @@
-<%- include('partials/head') %>
+<%- include('./partials/head', {title: "Bienvenido a Petitos Shop" }) %>
     <%- include('partials/header') %>
         <main class="products-home">
-            <!-------------------------------SECCIONES POR MASCOSTAS------------------------------------>
-
-            <!--PRODUCTOS----------------->
+            <!--PRODUCTOS-->
             <section class="lo-destacado">
                 <h3>LO DESTACADO</h3>
                 <div class="productos">
@@ -15,8 +13,8 @@
                             <b>Producto</b><br>
                             $$$$$$</br>
                             <br>
-                            <a class="comprar" href="/">Comprar</a>
-                            <a class="ver" href="/products/detalles">Ver</a>
+                            <a class="comprar" href="#">Comprar</a>
+                            <a class="ver" href="#">Ver</a>
                         </div>
                     </div>
                     <div class="productos">
@@ -124,7 +122,7 @@
             </section>
             </section>
         </main>
-        <!--CORREO-------------------------------------------------->
+        <!--CORREO-->
         <section class="correo">
             <div class="caja-correo">
                 <h3>RECIBI TODAS LAS OFERTAS</h3>
@@ -158,6 +156,6 @@
             });
         </script>
         <%- include('partials/footer') %>
-    </body>
+            </body>
 
-</html>
+            </html>

@@ -10,7 +10,7 @@
              color: #000000;
              font-weight: 100;
              font-family: 'Poppins', sans-serif;
-             margin-bottom: 30px;
+             margin-bottom: 200px;
              margin-top: 50px;
          }
         /*SECCIONES POR MASCOTA*/
@@ -41,8 +41,6 @@
              /*border-radius: 50%;*/
              width: 100%;
              height: 100%px;
-         }
-         .selecionar-por-mascota .card h4{
          }
          .selecionar-por-mascota .card p{
              padding: 0 1rem;
@@ -126,7 +124,7 @@
              margin-top: 100px;
              width: 100%;
              height: 300px;
-             background-color: #ffb700;
+             background-color: var(--nav-color);
      
          }
          .correo h3{

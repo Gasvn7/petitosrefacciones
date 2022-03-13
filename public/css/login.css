@@ -1,6 +1,6 @@
 
 .main-register-login{
-  margin-top:100px;
+  margin-bottom: 200px;
   display: flex;
   justify-content: center;
   padding: 2rem;
@@ -15,7 +15,7 @@
  
 .input{
   border: none;
-  border-bottom: 2px solid rgb(2, 2, 2);
+  border-bottom: 1px solid rgb(2, 2, 2);
   margin-bottom: 1rem;
   font-size: 20px;
   outline: none;
@@ -25,9 +25,7 @@
   display: flex;
   flex-direction: column;
   justify-items: center;
-  background-color: white;
   padding: 45px;
-  border: 2px solid black;
 }
 .clearfix{
   display: flex;

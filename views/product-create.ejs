@@ -1,0 +1,62 @@
+<%- include('partials/head', {title: "Crea tu producto - Petitos Shop" })%>
+    <%- include('partials/header') %>
+        <main class="main-crud">
+            <section class="crud-contanier">
+                <form action="/products" method="POST" class="crud-form" enctype="multipart/form-data">
+                    <h1>PRODUCTO NUEVO</h1>
+                    <div class="crud crud-name">
+                        <h3>Nombre</h3>
+                        <input type="text" id="name" name="name" placeholder="Tostadas Gatunixs">
+                    </div>
+                    <div class="crud crud-prices">
+                        <h3>Precio</h3>
+                        <input type="text" id="price" name="price" placeholder="$500">
+                    </div>
+                    <div class="crud crud-sizes">
+                        <h3>Talle</h3>
+                        <select name="size" id="size">
+                            <option value="Empty"></option>
+                            <option value="Small">S</option>
+                            <option value="Medium">M</option>
+                            <option value="Large">L</option>
+                        </select>
+                    </div>
+                    <div class="crud crud-stock">
+                        <h3>Stock</h3>
+                        <input type="text" id="stock" name="stock" placeholder="50">
+                    </div>
+                    <div class="crud crud-categories">
+                        <h3>Categoria</h3>
+                        <select name="category" id="category">
+                            <option value=""></option>
+                            <option value="Perros Adultos">Perros Adultos</option>
+                            <option value="Perros Cachorros">Perros Cachorros</option>
+                            <option value="Gatos Adultos">Gatos Adultos</option>
+                            <option value="Gatos Cachorros">Gatos Cachorros</option>
+                        </select>
+                    </div>
+                    <div class="crud crud-brand">
+                        <h3>Marca</h3>
+                        <input type="text" id="brand" name="brand" placeholder="CatChow">
+                    </div>
+                    <div class="crud-image">
+                        <h3>Imágen</h3>
+                        <input type="file" id="image" name="image">
+                    </div>
+                    <div class="crud-details">
+                        <h3>Detalles</h3>
+                        <textarea name="details" id="details"
+                            placeholder="Alimento para gatos hecho a base de carbón con metanol" cols="30"
+                            rows="10"></textarea>
+                    </div>
+                    <div class="crud-buttons">
+                        <button type="submit">Crear Producto</button>
+                        <button type="reset">Cancelar</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+        <%- include('partials/footer') %>
+            </body>
+
+            </html>

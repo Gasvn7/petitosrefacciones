@@ -1,17 +1,29 @@
 const path = require('path');
+
+
+
+
+
+
+
 const userController = {
+
     register: function (req, res) {
-        res.render('register.ejs');
+        res.render('user-register');
     },
+
     login: function (req, res) {
-        res.render('login.ejs');
+        res.render('user-login');
     },
-    newprdct: function (req, res) {
-        res.render('newprdct.ejs');
-    },
-    editprdct: function (req, res) {
-        res.render('editprdct.ejs');
+
+    saveUser: function (req, res) {
+        
     }
 }
+
+
+
+
+
 
 module.exports = userController;

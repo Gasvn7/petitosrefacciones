@@ -1,27 +1,15 @@
-<%- include('partials/head') %>
+<%- include('partials/head', {title: "Producto: " + (product?.name ? product.name : 'Not Found' ) }) %>
     <%- include('partials/header') %>
-        <!--------PRODUCTOS----------->
         <main class="main-products">
             <div class="product-container">
-                <div class="product-views">
-                    <img src="/img/collares/collar 4.JPG" alt="">
-                    <img src="/img/collares/collar 8.JPG" alt="">
-                    <img src="/img/collares/collar 6.JPG" alt="">
-                </div>
                 <div class="description">
-                    <img class="product-img" src="/img/collares/collar 7.JPG" alt="">
-                    <h4>CARACTERISTICAS</h4>
-                    <ul>
-                        <li>
-                            <span>Hecho con cuero de vaca del olimpo</span>
-                        </li>
-                        <li>
-                            <span>Confeccionado a mano por elfos de Hungria</span>
-                        </li>
-                        <li>
-                            <span>Con esto tu perrito domará a cualquier perra</span>
-                        </li>
-                    </ul>
+                    <img class="product-img" src="/img/pruebas/<%= product.image %>" alt="">
+                    <div>
+                        <h4>CARACTERISTICAS</h4>
+                        <span>
+                            <%= product.details %>
+                        </span>
+                    </div>
                 </div>
                 <section class="details">
                     <div class="links-chain">
@@ -34,8 +22,11 @@
                         <a href="">COLLARES</a>
                     </div>
                     <div class="store">
-                        <h2>COLLAR BDSM BLUETOOTH</h2>
-                        <h3>$8.000.000</h3>
+                        <h2>
+                            <%= product.name %>
+                        </h2>
+                        <h3>$<%= product.price %>
+                        </h3>
                         <div class="cuotas">
                             <i class='bx bx-credit-card'></i>
                             <span class="cuotes">700 cuotas de $10.002</span><br>
@@ -63,6 +54,7 @@
                                 <a href="">AGREGAR AL CARRITO</a>
                             </div>
                         </div>
+                        <!--MEDIOS DE ENVIO-->
                         <div class="send-methods">
                             <i class='bx bxs-truck'></i>
                             <span>Medios de envío</span>
@@ -71,11 +63,12 @@
                         <form action=""><br>
                             <input type="tel" name="" id=""><br>
                         </form><br>
+                        <!--MEDIOS DE ENVIO-->
                     </div>
                 </section>
             </div>
         </main>
         <%- include('partials/footer') %>
-</body>
+            </body>
 
-</html>
+            </html>

@@ -1,15 +1,13 @@
 .main-products{
     display:flex;
     justify-content: center;
-    margin-top:100px;
-    margin-bottom: 40px;
+    margin-bottom: 200px;
     padding-left: 15px;
     padding-right: 15px;
     font-family: 'Poppins', sans-serif;
 }
 .product-container{
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     padding: 15px 0;
     background-color: white;
@@ -18,28 +16,20 @@
 .description {
     display:flex;
     flex-direction: column;
+    flex-grow: 1;
 }
-.product-views{
-    display:flex;
-    flex-direction: column;
-}
-.product-views img{
-    height: 100px;
-    width: 100px;
-    margin-top: 9px;    
-    border: 1px solid rgba(128, 128, 128, 0.472);
-}
-.product-views img:hover{
-    cursor: pointer;
-    border: 1px solid brown;
-}
-.description .product-img{
+.description img{
     width: auto;
     height: 100%;
     max-width: 100%;
     cursor:zoom-in;
 }
-.description span{
+.description div {
+    padding: 15px 0;
+    width: 100%;
+    max-width: 450px;
+}
+.description div span{
     opacity: 0.8;
     font-size: 14px;
 }
@@ -49,7 +39,7 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 15px;
-    width: 35%;
+    flex-grow: 1;
 }
 .details h2{
     font-size: 25px;
@@ -129,9 +119,11 @@
     border-color: black;
 }
 .details .store .add-to-cart .minus-plus button {
+    display: flex;
+    align-items: center;
     border: none;
     background: none;
-    font-size: 20px;
+    font-size: 25px;
     cursor: pointer;
     transition: all 0.5s ease;
 }
@@ -139,11 +131,15 @@
     opacity: 0.5;
 }
 .details .store .add-to-cart .minus-plus span {
+    display: flex;
+    align-items: center;
     padding-left: 10px;
     padding-right: 10px;
+    font-size: 20px;
     cursor:context-menu;
 }
 .details .store .add-to-cart .add{
+    width: 300px;
     margin-left:15px;
     padding: 5px 15px;
     background-color: black;
@@ -154,8 +150,10 @@
     background-color: rgb(78, 78, 78);
 }
 .details .store .add-to-cart .add a{
-    font-size: 15px;
-    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    padding: 10px 20px;
     font-weight: lighter;
     text-decoration: none;
     color: var(--text-color);
@@ -172,4 +170,10 @@
 }
 .details .store .send-methods span{
     font-size: 15px;
+}
+
+@media (max-width: 1050px){
+    .product-container{
+        flex-wrap: wrap;
+    }
 }

@@ -1,0 +1,43 @@
+<%- include('./partials/head', {title: "Crea tu cuenta - Petitos Shop" }) %>
+    <%- include('partials/header') %>
+        <!----Formulario-Register-->
+        <main class="main-register-login">
+            <form action="" method="POST">
+                <div class="container">
+                    <h1>Registrate</h1>
+                    <p>Por favor complete el formulario para crear tu cuenta.</p>
+                    <hr>
+
+                    <label for="name"><b>¿Cuál es tu nombre?</b></label>
+                    <input class="input" type="text" placeholder="Tu nombre" name="name" required>
+                    <label for="name"><b>¿Cuál es tu apellido?</b></label>
+                    <input class="input" type="text" placeholder="Tu apellido" name="name" required>
+
+                    <label for="email"><b>Ingresa tu email</b></label>
+                    <input class="input" type="text" placeholder="pepito@hotmail.com" name="email" required>
+
+                    <label for="psw"><b>Ingresa una contraseña</b></label>
+                    <input class="input" type="password" placeholder="Contraseña" name="psw" required>
+
+                    <label for="perfil"><b>Foto de perfil</b></label>
+                    <input type="file" name="image" id="image">
+
+                    <p>Al crearte una cuenta aceptas los <a href="#" style="color:dodgerblue">Terminos y
+                            condiciones.</a>
+                    </p>
+
+                    <div class="clearfix">
+                        <button class="login-button" type="submit" value="crear cuenta" name="">
+                            Crear cuenta
+                        </button>
+                        <a href="/users/login" class="register-button">
+                            Iniciar sesión
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </main>
+        <%- include('partials/footer') %>
+            </body>
+
+            </html>

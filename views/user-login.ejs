@@ -1,0 +1,31 @@
+<%- include('./partials/head', {title: "Ingresa en tu cuenta - Petitos Shop" }) %>
+  <%- include('partials/header') %>
+    <!----Formulario-login-->
+    <main class=" main-register-login">
+  <form action="" class="form-login" method="POST">
+    <div class="container">
+      <h1>Ingresa</h1>
+      <p>Por favor complete el formulario para ingresar.</p>
+      <hr>
+
+      <label for="email"><b>Ingresa tu Email</b></label>
+      <input class="input" type="text" placeholder="Ingresa tu email" name="email" required>
+
+      <label for="psw"><b>Contraseña</b></label>
+      <input class="input" type="password" placeholder="Ingresa tu contraseña" name="psw" required>
+
+      <div class="clearfix">
+        <button class="login-button" type="submit" value="Iniciar sesión" name="">
+          Iniciar sesión
+        </button>
+        <a href="/users/register" class="register-button">
+          Registrarme
+        </a>
+      </div>
+    </div>
+  </form>
+  </main>
+  <%- include('partials/footer') %>
+    </body>
+
+    </html>
