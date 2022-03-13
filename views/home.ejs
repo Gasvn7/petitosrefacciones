@@ -1,161 +1,384 @@
-<%- include('./partials/head', {title: "Bienvenido a Petitos Shop" }) %>
-    <%- include('partials/header') %>
-        <main class="products-home">
-            <!--PRODUCTOS-->
-            <section class="lo-destacado">
-                <h3>LO DESTACADO</h3>
-                <div class="productos">
-                    <div class="cuerpo-tarjeta">
-                        <div class="foto">
-                            <img src="/img/collares/collar 7.JPG" alt="">
-                        </div>
-                        <div class="descripcion">
-                            <b>Producto</b><br>
-                            $$$$$$</br>
-                            <br>
-                            <a class="comprar" href="#">Comprar</a>
-                            <a class="ver" href="#">Ver</a>
-                        </div>
-                    </div>
-                    <div class="productos">
-                        <div class="cuerpo-tarjeta">
-                            <div class="foto">
-                                <img src="/img/ropa/ropa 3.JPG" alt="">
-                            </div>
-                            <div class="descripcion">
-                                <b>Producto</b><br>
-                                $$$$$$</br>
-                                <br>
-                                <a class="comprar" href="#">Comprar</a>
-                                <a class="ver" href="#">Ver</a>
-                            </div>
-                        </div>
-                        <div class="productos">
-                            <div class="cuerpo-tarjeta">
-                                <div class="foto">
-                                    <img src="/img/cuchas/cucha 4.JPG" alt="">
-                                </div>
-                                <div class="descripcion">
-                                    <b>Producto</b><br>
-                                    $$$$$$</br>
-                                    <br>
-                                    <a class="comprar" href="#">Comprar</a>
-                                    <a class="ver" href="#">Ver</a>
-                                </div>
-                            </div>
-                            <div class="productos">
-                                <div class="cuerpo-tarjeta">
-                                    <div class="foto">
-                                        <img src="/img/collares/pretal 3.JPG" alt="">
-                                    </div>
-                                    <div class="descripcion">
-                                        <b>Producto</b><br>
-                                        $$$$$$</br>
-                                        <br>
-                                        <a class="comprar" href="#">Comprar</a>
-                                        <a class="ver" href="#">Ver</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="ofertas">
-                <h3>OFERTAS</h3>
-                <div class="productos">
-                    <div class="cuerpo-tarjeta">
-                        <div class="foto">
-                            <img src="/img/ropa/ropa 12.JPG" alt="">
-                        </div>
-                        <div class="descripcion">
-                            <b>Producto</b><br>
-                            $$$$$$</br>
-                            <br>
-                            <a class="comprar" href="#">Comprar</a>
-                            <a class="ver" href="#">Ver</a>
-                        </div>
-                    </div>
-                    <div class="productos">
-                        <div class="cuerpo-tarjeta">
-                            <div class="foto">
-                                <img src="/img/cuchas/cucha 2.JPG" alt="">
-                            </div>
-                            <div class="descripcion">
-                                <b>Producto</b><br>
-                                $$$$$$</br>
-                                <br>
-                                <a class="comprar" href="#">Comprar</a>
-                                <a class="ver" href="#">Ver</a>
-                            </div>
-                        </div>
-                        <div class="productos">
-                            <div class="cuerpo-tarjeta">
-                                <div class="foto">
-                                    <img src="/img/collares/collar 6.JPG" alt="">
-                                </div>
-                                <div class="descripcion">
-                                    <b>Producto</b><br>
-                                    $$$$$$</br>
-                                    <br>
-                                    <a class="comprar" href="#">Comprar</a>
-                                    <a class="ver" href="#">Ver</a>
-                                </div>
-                            </div>
-                            <div class="productos">
-                                <div class="cuerpo-tarjeta">
-                                    <div class="foto">
-                                        <img src="/img/ropa/ropa 11.JPG" alt="">
-                                    </div>
-                                    <div class="descripcion">
-                                        <b>Producto</b><br>
-                                        $$$$$$</br>
-                                        <br>
-                                        <a class="comprar" href="#">Comprar</a>
-                                        <a class="ver" href="#">Ver</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            </section>
-        </main>
-        <!--CORREO-->
-        <section class="correo">
-            <div class="caja-correo">
-                <h3>RECIBI TODAS LAS OFERTAS</h3>
-                <p>¿Quieres recibir nuestras ofertas? ¡Registrate ya mismo y comenzá a disfrutarlas!</p>
-                <div class="email-formpart">
-                    <form class="form-email" action="" method="GET">
-                        <input type="email" name="correo" class="input" id="correo" placeholder="Tu email">
-                        <button type="submit" class="submit"><i class="fas fa-arrow-right"></i></button>
-                    </form>
-                </div>
-            </div>
-        </section>
-        <!-- Swiper JS -->
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-        <!-- Initialize Swiper -->
-        <script>
-            var swiper = new Swiper(".mySwiper", {
-                slidesPerView: 3,
-                spaceBetween: 30,
-                slidesPerGroup: 3,
-                loop: true,
-                loopFillGroupWithBlank: true,
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },
-            });
-        </script>
-        <%- include('partials/footer') %>
-            </body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petitos PetShop Home</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c328687099.js" crossorigin="anonymous"></script>
+    <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7e0924e4a6.js" crossorigin="anonymous"></script>
 
-            </html>
+<body>
+
+<!-- Inicio de la portada  -->
+
+<section class="portada" id="home">
+
+    <div class="portadatexto">
+        <h3>fresh coffee in the morning</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat labore, sint cupiditate distinctio tempora reiciendis.</p>
+        <a href="#" class="btn">get yours now</a>
+    </div>
+
+</section>
+
+  <h1>TIENDA DE MASCOTAS ONLINE</h1>
+<!-- Fin de la portada -->
+<section class="bannerprincipal">
+
+  <div class="bannerprin">
+      <img src="/img/parabanners/pexels-koolshooters-7683155.jpg" alt="">
+      <div class="contentprinc">
+          <h3>special offer</h3>
+          <p>upto 45% off</p>
+          <a href="#" class="btn">check out</a>
+      </div>
+  </div>
+  </section>
+<!-- Final del banner pincipal -->
+
+<!-- Principio de la sección de mascotas  -->
+
+<section class="bannerspequeños">
+
+  <div class="banner">
+      <img src="/img/parabanners/pexels-koolshooters-7683155.jpg" alt="">
+      <div class="content">
+          <h3>special offer</h3>
+          <p>upto 45% off</p>
+          <a href="#" class="btn">check out</a>
+      </div>
+  </div>
+  <div class="banner">
+    <img src="/img/parabanners/pexels-koolshooters-7683155.jpg" alt="">
+    <div class="content">
+        <h3>special offer</h3>
+        <p>upto 45% off</p>
+        <a href="#" class="btn">check out</a>
+    </div>
+</div>
+
+  <div class="banner">
+      <img src="/img/parabanners/adorable-brown-and-white-basenji-dog-smiling-and-giving-high-five-isolated-on-white.jpg" alt="">
+      <div class="content">
+          <h3>limited offer</h3>
+          <p>upto 50% off</p>
+          <a href="#" class="btn">check out</a>
+      </div>
+  </div>
+
+</section>
+<!-- Final de la sección de mascotas  -->
+<!-- Principio de los prodcutos  -->
+
+  <h1>PRODUCTOS</h1>
+<!-- deal section ends -->
+
+<section class="products" id="products">
+
+  <div class="box-container">
+
+      <div class="box">
+          <img class="imagendelproducto" src="/img/ropa/ropa 14.JPG"" alt="">
+          <div class="content">
+              <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+              </div>
+              <h3>healthy pets food</h3>
+              <div class="price"> $10.03 <span>12.50</span> </div>
+              <a href="#" class="btn">add to cart</a>
+          </div>
+      </div>
+
+      <div class="box">
+          <img class="imagendelproducto" src="/img/ropa/ropa 14.JPG" alt="">
+          <div class="content">
+              <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+              </div>
+              <h3>healthy pets food</h3>
+              <div class="price"> $10.03 <span>12.50</span> </div>
+              <a href="#" class="btn">add to cart</a>
+          </div>
+      </div>
+
+      <div class="box">
+          <img src="/img/ropa/ropa 14.JPG" alt="">
+          <div class="content">
+              <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+              </div>
+              <h3>healthy pets food</h3>
+              <div class="price"> $10.03 <span>12.50</span> </div>
+              <a href="#" class="btn">add to cart</a>
+          </div>
+      </div>
+
+      <div class="box">
+          <img src="/img/ropa/ropa 14.JPG" alt="">
+          <div class="content">
+              <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+              </div>
+              <h3>healthy pets food</h3>
+              <div class="price"> $10.03 <span>12.50</span> </div>
+              <a href="#" class="btn">add to cart</a>
+          </div>
+      </div>
+
+      <div class="box">
+          <img src="/img/ropa/ropa 14.JPG" alt="">
+          <div class="content">
+              <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+              </div>
+              <h3>healthy pets food</h3>
+              <div class="price"> $10.03 <span>12.50</span> </div>
+              <a href="#" class="btn">add to cart</a>
+          </div>
+      </div>
+
+      <div class="box">
+          <img src="/img/ropa/ropa 14.JPG" alt="">
+          <div class="content">
+              <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+              </div>
+              <h3>healthy pets food</h3>
+              <div class="price"> $10.03 <span>12.50</span> </div>
+              <a href="#" class="btn">add to cart</a>
+          </div>
+      </div>
+
+  </div>
+</section>
+<!-- Final de los productos  -->
+
+<!-- Principio de la caja de comentarios  -->
+<section class="CAJADECOMENTARIOS" id="review">
+
+  <h1 class="heading">Opiniones</h1>
+  
+  <div class="box-container">
+  
+      <div class="box">
+          <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+          </div>
+          <p>Acá va una opinión</p>
+          <div class="user">
+              <div class="user-info">
+                  <h3>Armando Casas</h3>
+                  <span>12/03/22</span>
+              </div>
+          </div>
+      </div>
+  
+      <div class="box">
+          <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+          </div>
+          <p>Acá va una opinión</p>
+          <div class="user">
+              <div class="user-info">
+                  <h3>Esteban Quito</h3>
+                  <span>12/03/22</span>
+              </div>
+          </div>
+      </div>
+  
+      <div class="box">
+          <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+          </div>
+          <p>Acá va una opinión</p>
+          <div class="user">
+              <div class="user-info">
+                  <h3>Elsa Patito</h3>
+                  <span>12/03/22</span>
+                  <span></span>
+              </div>
+          </div>
+
+      </div>
+
+      <div class="box">
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <p>Acá va una opinión</p>
+        <div class="user">
+            <div class="user-info">
+                <h3>Elvis Tek</h3>
+                <span>12/03/22</span>
+            </div>
+          </div>
+    </div>
+  </div>
+  </section>
+<!-- Final de la caja de comentarios  -->
+
+<!-- Principio del correo (celular)  -->
+        <section class="correocelular">
+           <div class="cajacorreocelular">
+          <p class="pcelular">Suscríbete para recibir las últimas actualizaciones</p>
+          <div class="emailformpartcelular">
+              <form class="formemailcelular" action="" method="GET">
+                  <input type="email" name="correo" class="inputcelular" id="correo" placeholder="Email">
+                  <button type="submit" class="submitcelular">Suscribirse</i></button>
+                </div>
+              </div>
+              </form>
+          </div>
+      </div>
+  </section>
+<!-- Final del correo (celular)  -->
+
+<!-- Principio del correo (desktop)  -->
+        <section class="correodesktop">
+          <div class="cajacorreodesktop">
+         <p class="pdesktop">Suscríbete para recibir las últimas actualizaciones</p>
+         <div class="emailformpartdesktop">
+             <form class="formemaildesktop" action="" method="GET">
+                 <input type="email" name="correo" class="inputdesktop" id="correo" placeholder="Email">
+                 <button type="submit" class="submitdesktop">Suscribirse</i></button>
+               </div>
+             </div>
+             </form>
+         </div>
+     </div>
+ </section>
+<!-- Final del correo (desktop)  -->
+
+<!-- blogs section starts  -->
+
+<section class="blogs" id="blogs">
+
+    <h1 class="heading"> our <span>blogs</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <div class="image">
+                <img src="/img/parabanners/pexels-teresa-berg-4201727.jpg" alt="">
+            </div>
+            <div class="content">
+                <a href="#" class="title">tasty and refreshing coffee</a>
+                <span>by admin / 21st may, 2021</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dicta.</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="/img/parabanners/pexels-anna-shvets-4588018.jpg" alt="">
+            </div>
+            <div class="content">
+                <a href="#" class="title">tasty and refreshing coffee</a>
+                <span>by admin / 21st may, 2021</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dicta.</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="/img/parabanners/pexels-koolshooters-7683155.jpg" alt="">
+            </div>
+            <div class="content">
+                <a href="#" class="title">tasty and refreshing coffee</a>
+                <span>by admin / 21st may, 2021</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dicta.</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Principo del banner sin nombre  -->
+<section class="BANNERSINOMBRE">
+
+  <div class="icons">
+    <i class="fas fa-dolly"></i>
+      <div class="info">
+        <h4 class="h4bannersinnombre" >Envíos en Capital y todo el País</h4>
+        <p class="pbannersinnombre">Te envíamos tu pedido a tu domicilio</p>
+      </div>
+  </div>
+
+  <div class="icons">
+    <i class="fas fa-cat"></i>
+      <div class="info">
+        <h4 class="h4bannersinnombre">Cuida a tu mascota</h4>
+        <p class="pbannersinnombre">Dale a tu perro un producto de la mejor calidad</p>
+      </div>
+  </div>
+
+  <div class="icons">
+    <i class="fas fa-user-circle"></i>
+      <div class="info">
+        <h4 class="h4bannersinnombre">Tu compra esta protegida</h4>
+        <p class="pbannersinnombre">Todos los medios de pagos</p>
+      </div>
+  </div>
+
+  <div class="icons">
+    <i class="far fa-credit-card"></i>
+      <div class="info">
+        <h4 class="h4bannersinnombre">Atención personalizada</h4>
+        <p class="pbannersinnombre">Envíanos un mensaje y te ayudamos con tu consulta</p>
+      </div>
+  </div>
+ 
+</section>
+<!-- Final del banner sin nombre)  -->
+<script src="https://kit.fontawesome.com/7e0924e4a6.js" crossorigin="anonymous"></script>
+  </body>
+</html>
