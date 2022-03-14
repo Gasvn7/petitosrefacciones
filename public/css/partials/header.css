@@ -36,7 +36,12 @@ header{
 }
 .header-logo .header-logo-a{
     font-family: 'Pacifico', cursive;
-    color:black;
+    font-size: 35px;
+    color:#fddeef;
+    text-shadow: -1px 1px 0 #000,
+                          1px 1px 0 #000,
+                         1px -1px 0 #000,
+                        -1px -1px 0 #000;
     background-color: transparent;
     text-decoration: none;
 }
@@ -54,7 +59,7 @@ header{
     z-index:1;
 }
 .searchbar-top{
-    box-shadow: 1px 1px wheat inset, -1px -1px wheat inset;
+    box-shadow: 1px 1px #fddeef inset, -1px -1px #fddeef inset;
     /*A*/
     position: relative;
     display: flex;
@@ -85,8 +90,8 @@ header{
     width: 50px;
     height: 100%;
     color: white;
-    background-color: wheat;
-    border: wheat;
+    background-color: #fddeef;
+    border: #fddeef;
     border-radius: 0 3px 3px 0;
     cursor: pointer;
 }
@@ -155,7 +160,7 @@ header{
     padding:5px;
 }
 .sub-menu-1 ul li:hover,.sub-menu-2 ul li:hover{
-    background-color: rgb(226, 197, 148);
+    background-color: #fddeef;
 }   
 .sub-menu-1 ul li a,.sub-menu-2 ul li a{
     text-decoration: none;
@@ -165,7 +170,7 @@ header{
 .nav-baritems:hover .sub-menu-2{
     display:block;
     position: absolute;
-    background-color: wheat;
+    background-color: #fbc0e1;
     padding: 5px;
     border-radius: 5px;
     z-index: 10;
