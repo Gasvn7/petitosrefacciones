@@ -1,7 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Cinzel&family=Dancing+Script&family=Lora&display=swap');
+@font-face {
+    font-family: "Avenir Next Rounded";
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+    src: url("https://fonts.shopifycdn.com/avenir_next_rounded/avenirnextrounded_n6.70a246a3b04e622acd4f5099fe7d696f711baff4.woff2?h1=anV2ZW5pYW51dHJpdGlvbi5jb20&hmac=2de436bbb6590160e6760bf156b436420c6481b17cfbf737964eaf3972596aec") format("woff2"),
+         url("https://fonts.shopifycdn.com/avenir_next_rounded/avenirnextrounded_n6.19150390dd803328b11894fb19904ee50bf0bf9e.woff?h1=anV2ZW5pYW51dHJpdGlvbi5jb20&hmac=bb2c9cda2fa5190583b3e2a0579f2908ecefebf53c82b1c16051ef543d94b4f9") format("woff");
+  }
 :root {
     --body-color: #E4E9F7;
     --nav-color: #4070F4;

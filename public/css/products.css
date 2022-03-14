@@ -4,7 +4,8 @@
     margin-bottom: 200px;
     padding-left: 15px;
     padding-right: 15px;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: "Open Sans", sans-serif;
 }
 .product-container{
     display: flex;

@@ -36,7 +36,7 @@
   .footer-dark ul a {
     color:inherit;
     text-decoration:none;
-    
+    font-family: "Open Sans", sans-serif;
     opacity:0.6;
   }
   
@@ -44,7 +44,9 @@
     opacity:0.8;
   }
   .footer-dark h3{
-      color:var(--icons-and-title-color);
+      color:wheat;
+      font-family: "Open Sans", sans-serif;
+      font-weight: bold;
   }
   
     .footer-dark .item:not(.social) {
@@ -84,9 +86,9 @@
     display:inline-block;
     text-align:center;
     border-radius:50%;
-    box-shadow:0 0 0 1px var(--icons-and-title-color);
+    box-shadow:0 0 0 1px wheat;
     margin:0 8px;
-    color:var(--icons-and-title-color);
+    color:wheat;
     opacity:0.75;
   }
   

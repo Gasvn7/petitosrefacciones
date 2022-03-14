@@ -129,10 +129,13 @@
          }
          .correo h3{
              color: white;
+             font-family: 'Annie Use Your Telescope', cursive;
+
          }
          .correo p{
              color: white;
-             font-family: 'Poppins', sans-serif;
+             font-family: 'Annie Use Your Telescope', cursive;
+
              text-align: center;
          }
          .caja-correo{

@@ -51,22 +51,19 @@
                                 <%} else { %>
                                     <option value=""></option>
                                     <% } %>
+                            <% if (EditingProduct.category==='Perros Adultos' ) { %>
+                                <option selected value="Perros Adultos">Perros Adultos</option>
+                                <%} else { %>
+                                    <option value="Perros Adultos">Perros Adultos</option>
+                                    <% } %>
 
-                                        <% if (EditingProduct.category==='Perros Adultos' ) { %>
-                                            <option selected value="Perros Adultos">Perros Adultos</option>
-                                            <%} else { %>
-                                                <option value="Perros Adultos">Perros Adultos</option>
-                                                <% } %>
+                            <% if (EditingProduct.category==='Perros Cachorros' ) { %>
+                                <option selected value="Perros Cachorros">Perros Cachorros</option>
+                                <%} else { %>
+                                    <option value="Perros Cachorros">Perros Cachorros</option>
+                                    <% } %>
 
-                                                    <% if (EditingProduct.category==='Perros Cachorros' ) { %>
-                                                        <option selected value="Perros Cachorros">Perros Cachorros
-                                                        </option>
-                                                        <%} else { %>
-                                                            <option value="Perros Cachorros">Perros Cachorros</option>
-                                                            <% } %>
-
-                                                                <% if (EditingProduct.category==='Gatos Cachorros' ) {
-                                                                    %>
+                                                                <% if (EditingProduct.category==='Gatos Cachorros' ) {%>
                                                                     <option selected value="Gatos Cachorros">Gatos
                                                                         Cachorros
                                                                     </option>
@@ -75,9 +72,7 @@
                                                                         </option>
                                                                         <% } %>
 
-                                                                            <% if %>
-                                                                                (EditingProduct.category==='Gatos Adultos'
-                                                                                <% ) { %>
+                                                                            <% if(EditingProduct.category==='Gatos Adultos') { %>
                                                                                 <option selected value="Gatos Adultos">
                                                                                     Gatos Adultos
                                                                                 </option>
@@ -103,13 +98,11 @@
                     </div>
                     <div class="crud-buttons">
                         <button type="submit">Editar Producto</button>
-
-
+                        <form action="" method="DELETE">
+                            <button type="submit">Borrar Producto</button>
+                        </form>
                         <button type="reset">Cancelar</button>
                     </div>
-                </form>
-                <form action="/products/delete/<%= EditingProduct.id %>?_method=DELETE" method="POST">
-                    <button type="submit">Borrar Producto</button>
                 </form>
             </section>
         </main>

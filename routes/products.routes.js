@@ -14,7 +14,7 @@ var storage = multer.diskStorage({
 
 var upload = multer({
     storage: storage
-})
+});
 
 //     CONTROLLER REQUIRE       //
 const productController = require('../controllers/product.Controller.js')

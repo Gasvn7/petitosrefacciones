@@ -2,6 +2,8 @@
     display:flex;
     justify-content: center;
     align-items: center;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
 }
 .crud-contanier{
     background-color: rgb(255, 255, 255);
@@ -18,8 +20,10 @@
     padding: 0 50px; 
     flex-wrap: wrap;
 }
-.main-crud h1{
+
+.main-crud h1, .main-crud h3{
     width: 100%;
+    font-weight: bold;
 }
 .crud{
     width:50%;
@@ -55,6 +59,7 @@
 }
 .crud-buttons button{
     font-size: 15px;
+    font-weight: bold;
     padding: 15px;
     border: 1px solid rgb(0, 0, 0);
     border-radius: 20px;

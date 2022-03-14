@@ -5,7 +5,6 @@
 }
 header{
     display: block;
-    font-family: sans-serif;
 }
 .header-top{
     position: relative;
@@ -36,6 +35,7 @@ header{
     font-weight: inherit;
 }
 .header-logo .header-logo-a{
+    font-family: 'Pacifico', cursive;
     color:black;
     background-color: transparent;
     text-decoration: none;
@@ -99,6 +99,7 @@ header{
     margin: 0 auto;
 }
 .header-iconlist{
+    font-family: "Muli", sans-serif;
     order: 1;
     padding-left:28px;
     display:flex;
@@ -117,7 +118,6 @@ header{
     width: 100%;
     border-bottom: 1px solid white;
     background-color: transparent;
-    font-family: "Avenir Next Rounded", sans-serif;
 }
 .nav-bar-container{
     max-width: 1480px;
@@ -141,6 +141,7 @@ header{
 }
 .nav-baritems a{
     display: block;
+    font-family: "Open Sans", sans-serif;
     cursor: pointer;
     color: inherit;
     background-color: transparent;
