@@ -1,0 +1,26 @@
+<div class="crud crud-sizes">
+    <h3>Talle</h3>
+    <select name="size" id="size" class="form-input">
+        <% if (EditingProduct.size==='' ) { %>
+            <option selected value=""></option>
+            <option value="Small">S</option>
+            <option value="Medium">M</option>
+            <option value="Large">L</option>
+            <% } else if (EditingProduct.size==='Small' ){ %>
+                <option value=""></option>
+                <option selected value="Small">S</option>
+                <option value="Medium">M</option>
+                <option value="Large">L</option>
+                <% } else if (EditingProduct.size==='Medium' ){ %>
+                    <option value=""></option>
+                    <option value="Small">S</option>
+                    <option selected value="Medium">M</option>
+                    <option value="Large">L</option>
+                    <% } else { %>
+                        <option value=""></option>
+                        <option value="Small">S</option>
+                        <option value="Medium">M</option>
+                        <option selected value="Large">L</option>
+                        <% } %>
+    </select>
+</div>

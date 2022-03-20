@@ -2,7 +2,8 @@
     <%- include('partials/header') %>
         <main class="main-crud">
             <section class="crud-contanier">
-                <form action="/products/edit/:id" method="PUT" class="crud-form" enctype="multipart/form-data">
+                <form action="/products/edit/<%= EditingProduct.id %>?_method=PATCH" method="POST" class="crud-form"
+                    enctype="multipart/form-data">
                     <h1>PRODUCTO NUEVO</h1>
                     <div class="crud crud-name">
                         <h3>Nombre</h3>
@@ -13,97 +14,36 @@
                         <input type="number" id="price" name="price" step="000.000.000"
                             value="<%= EditingProduct.price %>">
                     </div>
-                    <div class="crud crud-sizes">
-                        <h3>Talle</h3>
-                        <select name="size" id="size" class="form-input">
-                            <% if (EditingProduct.size==='' ) { %>
-                                <option selected value=""></option>
-                                <option value="Small">S</option>
-                                <option value="Medium">M</option>
-                                <option value="Large">L</option>
-                                <% } else if (EditingProduct.size==='Small' ){ %>
-                                    <option value=""></option>
-                                    <option selected value="Small">S</option>
-                                    <option value="Medium">M</option>
-                                    <option value="Large">L</option>
-                                    <% } else if (EditingProduct.size==='Medium' ){ %>
-                                        <option value=""></option>
-                                        <option value="Small">S</option>
-                                        <option selected value="Medium">M</option>
-                                        <option value="Large">L</option>
-                                        <% } else { %>
-                                            <option value=""></option>
-                                            <option value="Small">S</option>
-                                            <option value="Medium">M</option>
-                                            <option selected value="Large">L</option>
-                                            <% } %>
-                        </select>
-                    </div>
-                    <div class="crud crud-stock">
-                        <h3>Stock</h3>
-                        <input type="text" id="stock" name="stock" value="<%= EditingProduct.stock %>">
-                    </div>
-                    <div class="crud crud-categories">
-                        <h3>Categoria</h3>
-                        <select name="category" id="category">
-                            <% if (EditingProduct.category==='' ) { %>
-                                <option selected value=""></option>
-                                <%} else { %>
-                                    <option value=""></option>
-                                    <% } %>
-                            <% if (EditingProduct.category==='Perros Adultos' ) { %>
-                                <option selected value="Perros Adultos">Perros Adultos</option>
-                                <%} else { %>
-                                    <option value="Perros Adultos">Perros Adultos</option>
-                                    <% } %>
+                    <%- include('crud/crudsizes.ejs') %>
+                        <div class="crud crud-stock">
+                            <h3>Stock</h3>
+                            <input type="text" id="stock" name="stock" value="<%= EditingProduct.stock %>">
+                        </div>
+                        <%- include('crud/crudcategories.ejs') %>
+                            <div class="crud crud-brand">
+                                <h3>Marca</h3>
+                                <input type="text" id="brand" name="brand" value="<%= EditingProduct.brand %>">
+                            </div>
+                            <div class="crud-image">
+                                <h3>Imágen</h3>
+                                <img class="product-img" src="/img/pruebas/<%= EditingProduct.image %>" alt="">
+                                <input type="file" id="image" name="image">
+                            </div>
+                            <div class="crud-details">
+                                <h3>Detalles</h3>
+                                <textarea name="details" id="details" cols="30"
+                                    rows="5"><%= EditingProduct.details %></textarea>
+                            </div>
+                            <div class="crud-buttons">
+                                <button type="submit">Guardar cambios</button>
 
-                            <% if (EditingProduct.category==='Perros Cachorros' ) { %>
-                                <option selected value="Perros Cachorros">Perros Cachorros</option>
-                                <%} else { %>
-                                    <option value="Perros Cachorros">Perros Cachorros</option>
-                                    <% } %>
-
-                                                                <% if (EditingProduct.category==='Gatos Cachorros' ) {%>
-                                                                    <option selected value="Gatos Cachorros">Gatos
-                                                                        Cachorros
-                                                                    </option>
-                                                                    <%} else { %>
-                                                                        <option value="Gatos Cachorros">Gatos Cachorros
-                                                                        </option>
-                                                                        <% } %>
-
-                                                                            <% if(EditingProduct.category==='Gatos Adultos') { %>
-                                                                                <option selected value="Gatos Adultos">
-                                                                                    Gatos Adultos
-                                                                                </option>
-                                                                                <%} else { %>
-                                                                                    <option value="Gatos Adultos">Gatos
-                                                                                        Adultos
-                                                                                    </option>
-                                                                                    <% } %>
-                        </select>
-                    </div>
-                    <div class="crud crud-brand">
-                        <h3>Marca</h3>
-                        <input type="text" id="brand" name="brand" value="<%= EditingProduct.brand %>">
-                    </div>
-                    <div class="crud-image">
-                        <h3>Imágen</h3>
-                        <input type="file" id="image" name="image" value="<%= EditingProduct.image %>">
-                    </div>
-                    <div class="crud-details">
-                        <h3>Detalles</h3>
-                        <textarea name="details" id="details" cols="30"
-                            rows="5"><%= EditingProduct.details %></textarea>
-                    </div>
-                    <div class="crud-buttons">
-                        <button type="submit">Editar Producto</button>
-                        <form action="" method="DELETE">
-                            <button type="submit">Borrar Producto</button>
-                        </form>
-                        <button type="reset">Cancelar</button>
-                    </div>
+                                <button type="reset">Cancelar</button>
                 </form>
+
+                <form action="/products/delete/<%= EditingProduct.id %>?_method=DELETE" method="POST">
+                    <button class="btn-crud" type="submit">Eliminar Producto</button>
+                </form>
+                </div>
             </section>
         </main>
         <%- include('partials/footer') %>

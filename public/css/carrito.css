@@ -1,0 +1,60 @@
+/*-----------------------------Fuentes---------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+
+/*-----------------------------Carrito---------------------------------*/
+.shoppingcart-boxmain{
+    padding: 0px 10px 10px 10px;
+}
+.shoppingcart-boxmain{
+    margin: 40px auto;
+}
+.table-shoppingcart{
+    width: 100%;
+    border-collapse: collapse;
+}
+.shoppingcart-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+.shoppingcart-barra{
+    text-align: left;
+    padding: 5px;
+    color: black;
+    background: rgb(236, 203, 11);
+}
+.shoppingcart-pricetable{
+    font-size: 13px;
+}
+.shoppingcard-details{
+    padding: 10px 5px;
+}
+.shoppingcard-details input{
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+.remove{
+    color: brown;
+    font-size: 12px;
+}
+.shoppingcart-info img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+.shoppingcart-total{
+    display: flex;
+    justify-content: flex-end;
+}
+.shoppingcart-total table{
+    border-top: 3px solid rgb(255, 238, 0);
+    width: 100%;
+    max-width: 400px;
+}
+td:last-child{
+   text-align: right;
+}
+th:last-child{
+    text-align: right;
+ }

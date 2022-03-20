@@ -11,15 +11,22 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const productController = {
 
     /* <  VISTA DE TODOS LOS PRODUCTOS >*/
-
+    showPrdcts: (req, res) => {
+        res.render('products-views', {
+            product
+        })
+    },
     /* DETALLES DE UN PRODUCTO*/
     details: (req, res) => {
         let id = req.params.id
         let product = products.find(product => product.id == id)
-        res.render('product-detail', {
-            product
+        if (product) {
+            res.render('product-detail', {
+                product
+            }
+            )
         }
-        )
+        res.redirect('/');
     },
 
     /* CREAR - VISTA */
@@ -52,19 +59,41 @@ const productController = {
     edit: (req, res) => {
         let id = req.params.id
         let EditingProduct = products.find(el => el.id == id)
-
-        console.log(EditingProduct);
         res.render('product-edit', { EditingProduct })
+    },
+    /* ACTUALIZAR */
+    update: (req, res) => {
+        let id = req.params.id
+        let prodEditing = products.find(product => product.id == id)
+        let image
+        if (req.files[0] != undefined) {
+            image = req.files[0].filename
+        } else {
+            image = 'default-image.png'
+        }
+        prodEditing = {
+            id: prodEditing.id,
+            ...req.body,
+            image: image,
+        };
+        let prodEdited = products.map(product => {
+            if (product.id == prodEditing.id) {
+                return product = { ...prodEditing };
+            }
+            return product;
+        })
+        fs.writeFileSync(productsFilePath, JSON.stringify(prodEdited, null, ' '));
+        res.redirect('/');
     },
 
     /* ELIMINAR */
 
     destroy: (req, res) => {
         let id = req.params.id;
-        let finalProd = products.filter(elem => elem.id != id);
+        let finalProd = products.filter(product => product.id != id);
         fs.writeFileSync(productsFilePath, JSON.stringify(finalProd, null, ' '));
         res.redirect('/');
-    }
+    },
 }
 
 

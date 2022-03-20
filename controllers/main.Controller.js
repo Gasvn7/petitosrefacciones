@@ -12,6 +12,9 @@ const mainController = {
     },
     home: function (req, res) {
         res.render('home');
+    },
+    carrito: (req, res) => {
+        res.render('carrito');
     }
 }
 

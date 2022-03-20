@@ -22,19 +22,22 @@ const productController = require('../controllers/product.Controller.js')
 
 //*TODOS LOS PRODUCTOS*//
 
-
 //*CREAR PRODUCTO NUEVO*//
 router.get('/create', productController.create);
 router.post('/', upload.any(), productController.store);
 
 //*EDITAR PRODUCTO*//
 router.get('/edit/:id', productController.edit);
+router.patch('/edit/:id', upload.any(), productController.update);
 
 //*ELIMINAR PRODUCTO*//
 router.delete('/delete/:id', productController.destroy);
 
 //*DETALLES DE PRODUCTO*//
 router.get('/:id', productController.details);
+
+
+
 
 
 

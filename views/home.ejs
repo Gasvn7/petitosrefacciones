@@ -1,573 +1,474 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Petitos PetShop Home</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/c328687099.js" crossorigin="anonymous"></script>
-    <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/7e0924e4a6.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<%-include('partials/head', {title: "Petitos Shop" })%>
+    <%-include('partials/header')%>
+        <!-- Inicio de la portada  -->
+        <main class="main-home">
+            <section class="portada" id="home">
 
-<body>
-    <header class="header-top">
-        <div class="container-headder">
-            <div class="header-inter">
-                <h1 class="header-logo">
-                    <a href="/" class="header-logo-a">
-                        <span>PetitoShop</span>
-                    </a>
-                </h1>
-                <div class="header-searchbar">
-                    <form action="" class="search-bar">
-                        <div class="searchbar-top">
-                            <div class="searchbar-input-container">
-                                <input class="searchbar-input" type="text" name="" id="">
+                <div class="portadatexto">
+                    <h3>fresh coffee in the morning</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat labore, sint cupiditate
+                        distinctio
+                        tempora reiciendis.</p>
+                    <a href="#" class="btn">get yours now</a>
+                </div>
+
+            </section>
+
+            <h1>TIENDA DE MASCOTAS ONLINE</h1>
+            <!-- Fin de la portada -->
+            <section class="bannerprincipal">
+
+                <div class="bannerprin">
+                    <img src="/img/parabanners/pexels-koolshooters-7683155.jpg" alt="">
+                    <div class="contentprinc">
+                        <h3>special offer</h3>
+                        <p>upto 45% off</p>
+                        <a href="#" class="btn">check out</a>
+                    </div>
+                </div>
+            </section>
+            <!-- Final del banner principal -->
+
+            <!-- Principio de la sección de mascotas  -->
+            <section class="bannerspequeños">
+
+                <div class="banner">
+                    <img src="/img/parabanners/pexels-koolshooters-7683155.jpg" alt="">
+                    <div class="content">
+                        <h3>special offer</h3>
+                        <p>upto 45% off</p>
+                        <a href="#" class="btn">check out</a>
+                    </div>
+                </div>
+                <div class="banner">
+                    <img src="/img/parabanners/pexels-koolshooters-7683155.jpg" alt="">
+                    <div class="content">
+                        <h3>special offer</h3>
+                        <p>upto 45% off</p>
+                        <a href="#" class="btn">check out</a>
+                    </div>
+                </div>
+
+                <div class="banner">
+                    <img src="/img/parabanners/adorable-brown-and-white-basenji-dog-smiling-and-giving-high-five-isolated-on-white.jpg"
+                        alt="">
+                    <div class="content">
+                        <h3>limited offer</h3>
+                        <p>upto 50% off</p>
+                        <a href="#" class="btn">check out</a>
+                    </div>
+                </div>
+
+            </section>
+            <!-- Final de la sección de mascotas  -->
+            <!-- Principio de los productos  -->
+
+            <h1>PRODUCTOS</h1>
+            <!-- deal section ends -->
+
+            <section class="products" id="products">
+
+                <div class="box-container">
+
+                    <div class="box">
+                        <img class="imagendelproducto" src="/img/ropa/ropa 14.JPG" alt="">
+                        <div class="content">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
                             </div>
-                            <button class="searchbar-submit" type="submit">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                    style="fill: rgba(0, 0, 0, 1)">
-                                    <path
-                                        d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z">
-                                    </path>
-                                </svg>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-                <div class="header-iconlist">
-                    <div class="header-account">
-                        <a href="/users/login">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(0, 0, 0, 1)">
-                                <path
-                                    d="M12 2a5 5 0 1 0 5 5 5 5 0 0 0-5-5zm0 8a3 3 0 1 1 3-3 3 3 0 0 1-3 3zm9 11v-1a7 7 0 0 0-7-7h-4a7 7 0 0 0-7 7v1h2v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1z">
-                                </path>
-                            </svg>
-                        </a>
-                        <div class="sub-menu-1">
-                            <ul>
-                                <li><a href="/users/login">Ingresar</a></li>
-                                <li><a href="/users/register">Registrarme</a></li>
-                            </ul>
+                            <h3>healthy pets food</h3>
+                            <div class="price"> $10.03 <span>12.50</span> </div>
+                            <a href="#" class="btn">add to cart</a>
                         </div>
                     </div>
-                    <div class="header-cart">
-                        <a href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(0, 0, 0, 1)">
-                                <path
-                                    d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921zM17.307 15h-6.64l-2.5-6h11.39l-2.25 6z">
-                                </path>
-                                <circle cx="10.5" cy="19.5" r="1.5"></circle>
-                                <circle cx="17.5" cy="19.5" r="1.5"></circle>
-                            </svg>
-                        </a>
+
+                    <div class="box">
+                        <img class="imagendelproducto" src="/img/ropa/ropa 14.JPG" alt="">
+                        <div class="content">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h3>healthy pets food</h3>
+                            <div class="price"> $10.03 <span>12.50</span> </div>
+                            <a href="#" class="btn">add to cart</a>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <img src="/img/ropa/ropa 14.JPG" alt="">
+                        <div class="content">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h3>healthy pets food</h3>
+                            <div class="price"> $10.03 <span>12.50</span> </div>
+                            <a href="#" class="btn">add to cart</a>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <img src="/img/ropa/ropa 14.JPG" alt="">
+                        <div class="content">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h3>healthy pets food</h3>
+                            <div class="price"> $10.03 <span>12.50</span> </div>
+                            <a href="#" class="btn">add to cart</a>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <img src="/img/ropa/ropa 14.JPG" alt="">
+                        <div class="content">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h3>healthy pets food</h3>
+                            <div class="price"> $10.03 <span>12.50</span> </div>
+                            <a href="#" class="btn">add to cart</a>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <img src="/img/ropa/ropa 14.JPG" alt="">
+                        <div class="content">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h3>healthy pets food</h3>
+                            <div class="price"> $10.03 <span>12.50</span> </div>
+                            <a href="#" class="btn">add to cart</a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!-- Final de los productos  -->
+
+            <!-- Principio de la caja de comentarios  -->
+            <section class="CAJADECOMENTARIOS" id="review">
+
+                <h1 class="heading">Opiniones</h1>
+
+                <div class="box-container slider">
+
+                    <div class="box">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>Acá va una opinión</p>
+                        <div class="user">
+                            <div class="user-info">
+                                <h3>Armando Casas</h3>
+                                <span>12/03/22</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>Acá va una opinión</p>
+                        <div class="user">
+                            <div class="user-info">
+                                <h3>Armando Casas</h3>
+                                <span>12/03/22</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>Acá va una opinión</p>
+                        <div class="user">
+                            <div class="user-info">
+                                <h3>Armando Casas</h3>
+                                <span>12/03/22</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>Acá va una opinión</p>
+                        <div class="user">
+                            <div class="user-info">
+                                <h3>Esteban Quito</h3>
+                                <span>12/03/22</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>Acá va una opinión</p>
+                        <div class="user">
+                            <div class="user-info">
+                                <h3>Elsa Patito</h3>
+                                <span>12/03/22</span>
+                                <span></span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="box">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>Acá va una opinión</p>
+                        <div class="user">
+                            <div class="user-info">
+                                <h3>Elvis Tek</h3>
+                                <span>12/03/22</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </header>
-    <nav class="nav-bar">
-        <div class="nav-bar-inter">
-            <div class="nav-bar-container">
-                <ul class="nav-barlinks">
-                    <li class="nav-baritems"><a href="/">Inicio</a></li>
-                    <li class="nav-baritems"><a href="">Perros</a>
-                        <div class="sub-menu-2">
-                            <ul>
-                                <li><a href="#">Adultos</a></li>
-                                <li><a href="#">Cachorros</a></li>
-                                <li><a href="#">Alimento</a></li>
-                                <li><a href="#">Collares</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-baritems"><a href="">Gatos</a>
-                        <div class="sub-menu-2">
-                            <ul>
-                                <li><a href="#">Gatos Adultos</a></li>
-                                <li><a href="#">Gatitos Cachorros</a></li>
-                                <li><a href="#">Alimento</a></li>
-                                <li><a href="#">Collares</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-baritems"><a href="/products/create">Crear</a></li>
-                    <li class="nav-baritems"><a href="/products/edit/1">Editar</a></li>
-                    <li class="nav-baritems"><a href="/products/1">Detalles</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-<!-- Inicio de la portada  -->
+            </section>
+            <!-- Final de la caja de comentarios  -->
 
-<section class="portada" id="home">
-
-    <div class="portadatexto">
-        <h3>fresh coffee in the morning</h3>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat labore, sint cupiditate distinctio tempora reiciendis.</p>
-        <a href="#" class="btn">get yours now</a>
-    </div>
-
-</section>
-
-  <h1>TIENDA DE MASCOTAS ONLINE</h1>
-<!-- Fin de la portada -->
-<section class="bannerprincipal">
-
-  <div class="bannerprin">
-      <img src="/img/parabanners/pexels-koolshooters-7683155.jpg" alt="">
-      <div class="contentprinc">
-          <h3>special offer</h3>
-          <p>upto 45% off</p>
-          <a href="#" class="btn">check out</a>
-      </div>
-  </div>
-  </section>
-<!-- Final del banner pincipal -->
-
-<!-- Principio de la sección de mascotas  -->
-
-<section class="bannerspequeños">
-
-  <div class="banner">
-      <img src="/img/parabanners/pexels-koolshooters-7683155.jpg" alt="">
-      <div class="content">
-          <h3>special offer</h3>
-          <p>upto 45% off</p>
-          <a href="#" class="btn">check out</a>
-      </div>
-  </div>
-  <div class="banner">
-    <img src="/img/parabanners/pexels-koolshooters-7683155.jpg" alt="">
-    <div class="content">
-        <h3>special offer</h3>
-        <p>upto 45% off</p>
-        <a href="#" class="btn">check out</a>
-    </div>
-</div>
-
-  <div class="banner">
-      <img src="/img/parabanners/adorable-brown-and-white-basenji-dog-smiling-and-giving-high-five-isolated-on-white.jpg" alt="">
-      <div class="content">
-          <h3>limited offer</h3>
-          <p>upto 50% off</p>
-          <a href="#" class="btn">check out</a>
-      </div>
-  </div>
-
-</section>
-<!-- Final de la sección de mascotas  -->
-<!-- Principio de los prodcutos  -->
-
-  <h1>PRODUCTOS</h1>
-<!-- deal section ends -->
-
-<section class="products" id="products">
-
-  <div class="box-container">
-
-      <div class="box">
-          <img class="imagendelproducto" src="/img/ropa/ropa 14.JPG"" alt="">
-          <div class="content">
-              <div class="stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-              </div>
-              <h3>healthy pets food</h3>
-              <div class="price"> $10.03 <span>12.50</span> </div>
-              <a href="#" class="btn">add to cart</a>
-          </div>
-      </div>
-
-      <div class="box">
-          <img class="imagendelproducto" src="/img/ropa/ropa 14.JPG" alt="">
-          <div class="content">
-              <div class="stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-              </div>
-              <h3>healthy pets food</h3>
-              <div class="price"> $10.03 <span>12.50</span> </div>
-              <a href="#" class="btn">add to cart</a>
-          </div>
-      </div>
-
-      <div class="box">
-          <img src="/img/ropa/ropa 14.JPG" alt="">
-          <div class="content">
-              <div class="stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-              </div>
-              <h3>healthy pets food</h3>
-              <div class="price"> $10.03 <span>12.50</span> </div>
-              <a href="#" class="btn">add to cart</a>
-          </div>
-      </div>
-
-      <div class="box">
-          <img src="/img/ropa/ropa 14.JPG" alt="">
-          <div class="content">
-              <div class="stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-              </div>
-              <h3>healthy pets food</h3>
-              <div class="price"> $10.03 <span>12.50</span> </div>
-              <a href="#" class="btn">add to cart</a>
-          </div>
-      </div>
-
-      <div class="box">
-          <img src="/img/ropa/ropa 14.JPG" alt="">
-          <div class="content">
-              <div class="stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-              </div>
-              <h3>healthy pets food</h3>
-              <div class="price"> $10.03 <span>12.50</span> </div>
-              <a href="#" class="btn">add to cart</a>
-          </div>
-      </div>
-
-      <div class="box">
-          <img src="/img/ropa/ropa 14.JPG" alt="">
-          <div class="content">
-              <div class="stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-              </div>
-              <h3>healthy pets food</h3>
-              <div class="price"> $10.03 <span>12.50</span> </div>
-              <a href="#" class="btn">add to cart</a>
-          </div>
-      </div>
-
-  </div>
-</section>
-<!-- Final de los productos  -->
-
-<!-- Principio de la caja de comentarios  -->
-<section class="CAJADECOMENTARIOS" id="review">
-
-  <h1 class="heading">Opiniones</h1>
-  
-  <div class="box-container slider">
-  
-      <div class="box">
-          <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-          </div>
-          <p>Acá va una opinión</p>
-          <div class="user">
-              <div class="user-info">
-                  <h3>Armando Casas</h3>
-                  <span>12/03/22</span>
-              </div>
-          </div>
-      </div>
-
-      <div class="box">
-        <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-        </div>
-        <p>Acá va una opinión</p>
-        <div class="user">
-            <div class="user-info">
-                <h3>Armando Casas</h3>
-                <span>12/03/22</span>
-            </div>
-        </div>
-    </div>
-    
-    <div class="box">
-        <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-        </div>
-        <p>Acá va una opinión</p>
-        <div class="user">
-            <div class="user-info">
-                <h3>Armando Casas</h3>
-                <span>12/03/22</span>
-            </div>
-        </div>
-    </div>
-      <div class="box">
-          <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-          </div>
-          <p>Acá va una opinión</p>
-          <div class="user">
-              <div class="user-info">
-                  <h3>Esteban Quito</h3>
-                  <span>12/03/22</span>
-              </div>
-          </div>
-      </div>
-  
-      <div class="box">
-          <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-          </div>
-          <p>Acá va una opinión</p>
-          <div class="user">
-              <div class="user-info">
-                  <h3>Elsa Patito</h3>
-                  <span>12/03/22</span>
-                  <span></span>
-              </div>
-          </div>
-
-      </div>
-
-      <div class="box">
-        <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-        </div>
-        <p>Acá va una opinión</p>
-        <div class="user">
-            <div class="user-info">
-                <h3>Elvis Tek</h3>
-                <span>12/03/22</span>
-            </div>
-          </div>
-    </div>
-  </div>
-  </section>
-<!-- Final de la caja de comentarios  -->
-
-<!-- Principio del correo (celular)  -->
-        <section class="correocelular">
-           <div class="cajacorreocelular">
-          <p class="pcelular">Suscríbete para recibir las últimas actualizaciones</p>
-          <div class="emailformpartcelular">
-              <form class="formemailcelular" action="" method="GET">
-                  <input type="email" name="correo" class="inputcelular" id="correo" placeholder="Email">
-                  <button type="submit" class="submitcelular">Suscribirse</i></button>
+            <!-- Principio del correo (celular)  -->
+            <section class="correocelular">
+                <div class="cajacorreocelular">
+                    <p class="pcelular">Suscríbete para recibir las últimas actualizaciones</p>
+                    <div class="emailformpartcelular">
+                        <form class="formemailcelular" action="" method="GET">
+                            <input type="email" name="correo" class="inputcelular" id="correo" placeholder="Email">
+                            <button type="submit" class="submitcelular">Suscribirse</i></button>
+                    </div>
                 </div>
-              </div>
-              </form>
-          </div>
-      </div>
-  </section>
-<!-- Final del correo (celular)  -->
+                </form>
+                </div>
+                </div>
+            </section>
+            <!-- Final del correo (celular)  -->
 
-<!-- Principio del correo (desktop)  -->
-        <section class="correodesktop">
-          <div class="cajacorreodesktop">
-         <p class="pdesktop">Suscríbete para recibir las últimas actualizaciones</p>
-         <div class="emailformpartdesktop">
-             <form class="formemaildesktop" action="" method="GET">
-                 <input type="email" name="correo" class="inputdesktop" id="correo" placeholder="Email">
-                 <button type="submit" class="submitdesktop">Suscribirse</i></button>
-               </div>
-             </div>
-             </form>
-         </div>
-     </div>
- </section>
-<!-- Final del correo (desktop)  -->
+            <!-- Principio del correo (desktop)  -->
+            <section class="correodesktop">
+                <div class="cajacorreodesktop">
+                    <p class="pdesktop">Suscríbete para recibir las últimas actualizaciones</p>
+                    <div class="emailformpartdesktop">
+                        <form class="formemaildesktop" action="" method="GET">
+                            <input type="email" name="correo" class="inputdesktop" id="correo" placeholder="Email">
+                            <button type="submit" class="submitdesktop">Suscribirse</i></button>
+                    </div>
+                </div>
+                </form>
+                </div>
+                </div>
+            </section>
+            <!-- Final del correo (desktop)  -->
 
-<!-- blogs section starts  -->
+            <!-- blogs section starts  -->
+            <section class="blogs" id="blogs">
 
-<section class="blogs" id="blogs">
+                <h1 class="heading"> our <span>blogs</span> </h1>
 
-    <h1 class="heading"> our <span>blogs</span> </h1>
+                <div class="box-container">
 
-    <div class="box-container">
+                    <div class="box">
+                        <div class="image">
+                            <img src="/img/parabanners/pexels-teresa-berg-4201727.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <a href="#" class="title">tasty and refreshing coffee</a>
+                            <span>by admin / 21st may, 2021</span>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dicta.</p>
+                            <a href="#" class="btn">read more</a>
+                        </div>
+                    </div>
 
-        <div class="box">
-            <div class="image">
-                <img src="/img/parabanners/pexels-teresa-berg-4201727.jpg" alt="">
-            </div>
-            <div class="content">
-                <a href="#" class="title">tasty and refreshing coffee</a>
-                <span>by admin / 21st may, 2021</span>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dicta.</p>
-                <a href="#" class="btn">read more</a>
-            </div>
-        </div>
+                    <div class="box">
+                        <div class="image">
+                            <img src="/img/parabanners/pexels-anna-shvets-4588018.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <a href="#" class="title">tasty and refreshing coffee</a>
+                            <span>by admin / 21st may, 2021</span>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dicta.</p>
+                            <a href="#" class="btn">read more</a>
+                        </div>
+                    </div>
 
-        <div class="box">
-            <div class="image">
-                <img src="/img/parabanners/pexels-anna-shvets-4588018.jpg" alt="">
-            </div>
-            <div class="content">
-                <a href="#" class="title">tasty and refreshing coffee</a>
-                <span>by admin / 21st may, 2021</span>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dicta.</p>
-                <a href="#" class="btn">read more</a>
-            </div>
-        </div>
+                    <div class="box">
+                        <div class="image">
+                            <img src="/img/parabanners/pexels-koolshooters-7683155.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <a href="#" class="title">tasty and refreshing coffee</a>
+                            <span>by admin / 21st may, 2021</span>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dicta.</p>
+                            <a href="#" class="btn">read more</a>
+                        </div>
+                    </div>
 
-        <div class="box">
-            <div class="image">
-                <img src="/img/parabanners/pexels-koolshooters-7683155.jpg" alt="">
-            </div>
-            <div class="content">
-                <a href="#" class="title">tasty and refreshing coffee</a>
-                <span>by admin / 21st may, 2021</span>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dicta.</p>
-                <a href="#" class="btn">read more</a>
-            </div>
-        </div>
+                </div>
 
-    </div>
-
-</section>
+            </section>
 
 
-<!-- Principo del banner sin nombre  -->
-<section class="BANNERSINOMBRE">
+            <!-- Principio del banner sin nombre  -->
+            <section class="BANNERSINOMBRE">
 
-  <div class="icons">
-    <i class="fas fa-dolly"></i>
-      <div class="info">
-        <h4 class="h4bannersinnombre" >Envíos en Capital y todo el País</h4>
-        <p class="pbannersinnombre">Te envíamos tu pedido a tu domicilio</p>
-      </div>
-  </div>
+                <div class="icons">
+                    <i class="fas fa-dolly"></i>
+                    <div class="info">
+                        <h4 class="h4bannersinnombre">Envíos en Capital y todo el País</h4>
+                        <p class="pbannersinnombre">Te envíamos tu pedido a tu domicilio</p>
+                    </div>
+                </div>
 
-  <div class="icons">
-    <i class="fas fa-cat"></i>
-      <div class="info">
-        <h4 class="h4bannersinnombre">Cuida a tu mascota</h4>
-        <p class="pbannersinnombre">Dale a tu perro un producto de la mejor calidad</p>
-      </div>
-  </div>
+                <div class="icons">
+                    <i class="fas fa-cat"></i>
+                    <div class="info">
+                        <h4 class="h4bannersinnombre">Cuida a tu mascota</h4>
+                        <p class="pbannersinnombre">Dale a tu perro un producto de la mejor calidad</p>
+                    </div>
+                </div>
 
-  <div class="icons">
-    <i class="fas fa-user-circle"></i>
-      <div class="info">
-        <h4 class="h4bannersinnombre">Tu compra esta protegida</h4>
-        <p class="pbannersinnombre">Todos los medios de pagos</p>
-      </div>
-  </div>
+                <div class="icons">
+                    <i class="fas fa-user-circle"></i>
+                    <div class="info">
+                        <h4 class="h4bannersinnombre">Tu compra esta protegida</h4>
+                        <p class="pbannersinnombre">Todos los medios de pagos</p>
+                    </div>
+                </div>
 
-  <div class="icons">
-    <i class="far fa-credit-card"></i>
-      <div class="info">
-        <h4 class="h4bannersinnombre">Atención personalizada</h4>
-        <p class="pbannersinnombre">Envíanos un mensaje y te ayudamos con tu consulta</p>
-      </div>
-  </div>
- 
-</section>
-<!-- Final del banner sin nombre)  -->
-<footer class="footer-dark">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6 col-md-3 item">
-                <h3>Services</h3>
-                <ul>
-                    <li><a href="#">Web design</a></li>
-                    <li><a href="#">Development</a></li>
-                    <li><a href="#">Hosting</a></li>
-                </ul>
-            </div>
-            <div class="col-sm-6 col-md-3 item">
-                <h3>About</h3>
-                <ul>
-                    <li><a href="#">Company</a></li>
-                    <li><a href="#">Team</a></li>
-                    <li><a href="#">Collaborations</a></li>
-                </ul>
-            </div>
-            <div class="col item social">
-                <a href="#"><i class="icon ion-social-facebook"></i></a>
-                <a href="#"><i class="icon ion-social-twitter"></i></a>
-                <a href="#"><i class="icon ion-social-instagram"></i></a>
-            </div>
-        </div>
-        <p class="copyright">Petitos © 2022</p>
-    </div>
-</footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script type="text/javascript">
-    $('.slider').slick({
-  dots: true,
-  infinite: false,
-  speed: 300,
-  slidesToShow: 4,
-  slidesToScroll: 4,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ]
-});
-				
-</script>
-  </body>
-</html>
+                <div class="icons">
+                    <i class="far fa-credit-card"></i>
+                    <div class="info">
+                        <h4 class="h4bannersinnombre">Atención personalizada</h4>
+                        <p class="pbannersinnombre">Envíanos un mensaje y te ayudamos con tu consulta</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+                <button onclick="topFunction()" id="goUp" title="Arriba">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(0, 0, 0, 1)">
+                    <path d="m6.293 13.293 1.414 1.414L12 10.414l4.293 4.293 1.414-1.414L12 7.586z"></path>
+                </svg>
+            </button>
+        <!-- Final del banner sin nombre)  -->
+        <%-include('partials/footer')%>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+                integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <script type="text/javascript">
+                $('.slider').slick({
+                    dots: true,
+                    infinite: false,
+                    speed: 300,
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                    responsive: [
+                        {
+                            breakpoint: 1024,
+                            settings: {
+                                slidesToShow: 3,
+                                slidesToScroll: 3,
+                                infinite: true,
+                                dots: true
+                            }
+                        },
+                        {
+                            breakpoint: 600,
+                            settings: {
+                                slidesToShow: 2,
+                                slidesToScroll: 2
+                            }
+                        },
+                        {
+                            breakpoint: 480,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1
+                            }
+                        }
+                        // You can unslick at a given breakpoint now by adding:
+                        // settings: "unslick"
+                        // instead of a settings object
+                    ]
+                });
+
+            </script>
+            <script>
+                //Get the button
+                var goUp = document.getElementById("goUp");
+                
+                // When the user scrolls down 20px from the top of the document, show the button
+                window.onscroll = function() {scrollFunction()};
+                
+                function scrollFunction() {
+                  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    goUp.style.display = "block";
+                  } else {
+                    goUp.style.display = "none";
+                  }
+                }
+                
+                // When the user clicks on the button, scroll to the top of the document
+                function topFunction() {
+                  document.body.scrollTop = 0;
+                  document.documentElement.scrollTop = 0;
+                }
+                </script>
+            </body>
+
+            </html>

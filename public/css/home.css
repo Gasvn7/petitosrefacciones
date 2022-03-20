@@ -18,7 +18,7 @@
   section{
   padding:0.5rem 2%;
   }
-  body {
+  body{
   background: #fff;
   color: #000;
   margin: 0;
@@ -521,9 +521,22 @@
   color:#555;
   font-size: 1.3rem;
   }
+  #goUp{
+    display:none;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    bottom: 50px;
+    right:50px;
+    outline: none;
+    cursor: pointer;
+    background-color: #555;
+    border-radius:50%;
+    opacity: 0.8;
+  }
   /*Media*/
 @media(max-width:1200px){
-  html{
+  html .main-home{
     font-size: 55%;
   }
 }
