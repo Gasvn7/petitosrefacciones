@@ -20,21 +20,27 @@ var upload = multer({
 const productController = require('../controllers/product.Controller.js')
 
 
-//*TODOS LOS PRODUCTOS*//
+//*1. Listado de productos*//
+router.get('/lista', productController.showPrdcts)
 
-//*CREAR PRODUCTO NUEVO*//
+//*2. Formulario de creación de productos*//
 router.get('/create', productController.create);
+
+//*4. Acción de creación (a donde se envía el formulario*//
 router.post('/', upload.any(), productController.store);
 
-//*EDITAR PRODUCTO*//
+//*5. Formulario de edición de productos*//
 router.get('/edit/:id', productController.edit);
+
+//*6. Acción de edición (a donde se envía el formulario*//
 router.patch('/edit/:id', upload.any(), productController.update);
 
-//*ELIMINAR PRODUCTO*//
+//*7. Acción de borrado*//
 router.delete('/delete/:id', productController.destroy);
 
-//*DETALLES DE PRODUCTO*//
+//*3. Detalle de un producto particular*//
 router.get('/:id', productController.details);
+
 
 
 

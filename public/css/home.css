@@ -1,5 +1,5 @@
 /*General*/ 
-  *{
+  .main-home{
   margin:0; padding:0;
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -15,10 +15,10 @@
   text-transform: capitalize;
   transition: .2s linear;
   }
-  section{
+  .main-home section{
   padding:0.5rem 2%;
   }
-  body{
+  .main-home body{
   background: #fff;
   color: #000;
   margin: 0;
@@ -42,12 +42,12 @@
     display: block;
   }
   /*Fuentes*/
-  h1{
+  .main-home h1{
   font-family: 'Poppins', sans-serif;
   text-align: center;
   font-size: 26px;
   }
-  h4{
+  .main-home h4{
   font-family: 'Poppins', sans-serif;
   font-size: 24px;
   }

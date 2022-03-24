@@ -13,7 +13,7 @@ const productController = {
     /* <  VISTA DE TODOS LOS PRODUCTOS >*/
     showPrdcts: (req, res) => {
         res.render('products-views', {
-            product
+            products
         })
     },
     /* DETALLES DE UN PRODUCTO*/
@@ -59,7 +59,10 @@ const productController = {
     edit: (req, res) => {
         let id = req.params.id
         let EditingProduct = products.find(el => el.id == id)
-        res.render('product-edit', { EditingProduct })
+        res.render('product-edit', {
+            EditingProduct,
+            saved: EditingProduct
+        })
     },
     /* ACTUALIZAR */
     update: (req, res) => {
