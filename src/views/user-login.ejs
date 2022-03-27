@@ -1,31 +1,28 @@
-<%- include('./partials/head', {title: "Ingresa en tu cuenta - Petitos Shop" }) %>
-  <%- include('partials/header') %>
-    <!----Formulario-login-->
-    <main class=" main-register-login">
-      <form action="" class="form-login" method="POST">
-        <div class="container">
-          <h1>Ingresa</h1>
-          <p>Por favor complete el formulario para ingresar.</p>
-          <hr>
+<!----Formulario-login-->
+<main>
+  <% if ( typeof errors != 'undefined' ) { %>
+    <ul>
+      <% for( let i=0; i < errors.length; i++ ) { %>
+        <li>
+          <%- errors[i].msg %>
+        </li>
+        <% } %>
+    </ul>
+    <% } %>
+      <form action="/users/login" method="POST">
 
-          <label for="email"><b>Ingresa tu Email</b></label>
-          <input class="input" type="text" placeholder="Ingresa tu email" name="email" id="email" required>
+        <label for="name">Nombre:</label>
+        <input type="text" name="name" id="name">
 
-          <label for="psw"><b>Contraseña</b></label>
-          <input class="input" type="password" placeholder="Ingresa tu contraseña" name="psw" id="psw" required>
+        <label for="email">Correo electrónico:</label>
+        <input type="email" name="email" id="email">
 
-          <div class="clearfix">
-            <button class="login-button" type="submit" value="Iniciar sesión">
-              Iniciar sesión
-            </button>
-            <a href="/users/register" class="register-button">
-              Registrarme
-            </a>
-          </div>
-        </div>
+        <label for="password">Contraseña:</label>
+        <input type="password" name="password" id="password">
+
+        <button type="submit">Registrarse</button>
       </form>
-    </main>
-    <%- include('partials/footer') %>
-      </body>
+</main>
+</body>
 
-      </html>
+</html>

@@ -2,33 +2,34 @@
     <%- include('partials/header') %>
         <!----Formulario-Register-->
         <main class="main-register-login">
-            <form action="" method="POST">
+            <form action="/users" method="POST" enctype="multipart/form-data">
                 <div class="container">
-                    <h1>Registrate</h1>
-                    <p>Por favor complete el formulario para crear tu cuenta.</p>
+                    <h1>Registrarme</h1>
+                    <p>Por favor completa el formulario para registrarte.</p>
                     <hr>
 
-                    <label for="name"><b>¿Cuál es tu nombre?</b></label>
+                    <label for="first-name"><b>¿Cuál es tu nombre?</b></label>
                     <input class="input" type="text" placeholder="Tu nombre" name="first-name" id="first-name" required>
-                    <label for="name"><b>¿Cuál es tu apellido?</b></label>
-                    <input class="input" type="text" placeholder="Tu apellido" name="second-name" id="second-name"
-                        required>
+
+                    <label for="last-name"><b>¿Cuál es tu apellido?</b></label>
+                    <input class="input" type="text" placeholder="Tu apellido" name="last-name" id="last-name" required>
 
                     <label for="email"><b>Ingresa tu email</b></label>
-                    <input class="input" type="text" placeholder="pepito@hotmail.com" name="email" id="email" required>
+                    <input class="input" type="email" placeholder="pepito@hotmail.com" name="email" id="email" required>
 
-                    <label for="psw"><b>Ingresa una contraseña</b></label>
-                    <input class="input" type="password" placeholder="Contraseña" name="psw" required>
+                    <label for="password"><b>Ingresa una contraseña</b></label>
+                    <input class="input" type="password" placeholder="Tu contraseña" name="password" id="password"
+                        required>
 
-                    <label for="perfil"><b>Foto de perfil</b></label>
+                    <label for="image"><b>Foto de perfil</b></label>
                     <input type="file" name="image" id="image">
 
-                    <p>Al crearte una cuenta aceptas los <a href="#" style="color:dodgerblue">Terminos y
+                    <p>Al crearte una cuenta aceptas los <a href="#" style="color:dodgerblue">Términos y
                             condiciones.</a>
                     </p>
 
                     <div class="clearfix">
-                        <button class="login-button" type="submit" value="crear cuenta" name="">
+                        <button class="login-button" type="submit" value="register" name="register">
                             Crear cuenta
                         </button>
                         <a href="/users/login" class="register-button">
@@ -39,6 +40,5 @@
             </form>
         </main>
         <%- include('partials/footer') %>
-            </body>
-
-            </html>
+    </body>
+</html>
