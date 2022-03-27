@@ -1,17 +1,63 @@
-<%- include('partials/head', {title: "Producto: " + (product?.name ? product.name : 'Not Found' ) }) %>
+<%- include('partials/head', {title: "Listado de productos"}) %>
     <%- include('partials/header') %>
-        <div>
-            <div>
-                <div>
-                    <div>ID</div>
-                    <div>Nombre</div>
-                    <div>Detalles</div>
-                    <div>A</div>
-                    <div></div>
-                    <div></div>
-                </div>
-            </div>
-        </div>
+        <table id="customers">
+            <tr>
+                <th>id</th>
+                <th>Nombre</th>
+                <th>Stock</th>
+                <th>Imagen</th>
+                <th>Detalles</th>
+                <th>Precio</th>
+                <th>Talles</th>
+                <th>Categoría</th>
+                <th>Acciones</th>
+            </tr>
+
+            <tr>
+                <% products.forEach((produc)=>{ %>
+            <tr>
+
+                <td class="iddd">
+                    <%= produc.id %>
+                </td>
+                <td>
+                    <%= produc.name %>
+                </td>
+                <td>
+                    <%= produc.stock %>
+                </td>
+                <td> <img class="product-img" src="/img/pruebas/<%= produc.image %>" alt=""> </td>
+                <td>
+                    <%= produc.details%>
+                </td>
+                <td>
+                    <%= produc.price%>
+                </td>
+                <td>
+                    <%= produc.size%>
+                </td>
+                <td>
+                    <%= produc.category%>
+                </td>
+                <td>
+                    <script src="edit/<%= produc.id %>"></script>
+                    <a href="edit/<%= produc.id %>"><button id="reload">Editar</button></a>
+                    <form action="/products/delete/<%= produc.id %>?_method=DELETE" method="POST">
+                        <button class="btn-crud" type="submit">Eliminar</button>
+                    </form>
+                </td>
+
+            </tr>
+            <% }) %>
+
+        </table>
+        <script>
+            const reload = document.getElementById('reload');
+
+            reload.addEventListener('click', el => { // el  es para indicar la ausencia de parametros
+                location.reload();
+            });
+        </script>
         <%- include('partials/footer') %>
             </body>
 
