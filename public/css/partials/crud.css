@@ -39,9 +39,13 @@
     
 }
 .crud-image{
-    width:100%;
     padding: 10px 30px;
 }
+.crud-image img{
+    max-width: 16rem;
+    max-height: 12rem;
+}
+
 .crud-details{
     padding: 10px 30px;
     width: 100%;

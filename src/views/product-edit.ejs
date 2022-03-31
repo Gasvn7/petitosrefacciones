@@ -52,7 +52,8 @@
                     </div>
                     <div class="crud-image">
                         <h3>Imagen</h3>
-                        <img class="product-img" src="/img/pruebas/<%= EditingProduct.image %>" alt="">
+                        <img class="product-img" src="/img/pruebas/<%= EditingProduct.image %>"
+                            alt="<%= EditingProduct.name%>">
                         <input type="file" id="image" name="image">
                     </div>
                     <div class="crud-details">
@@ -69,10 +70,11 @@
                 <form action="/products/delete/<%= EditingProduct.id %>?_method=DELETE" method="POST">
                     <button class="btn-crud" type="submit">Eliminar Producto</button>
                 </form>
-                
+
                 </div>
             </section>
         </main>
         <%- include('partials/footer') %>
-    </body>
- </html>
+            </body>
+
+            </html>

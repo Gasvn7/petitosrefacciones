@@ -21,7 +21,8 @@ const productController = require('../controllers/product.Controller.js')
 
 
 //*1. Listado de productos*//
-router.get('/list', productController.showPrdcts)
+router.get('/list', productController.showPrdcts);
+router.delete('/list/delete/:id', productController.list_destroy);
 
 //*2. Formulario de creación de productos*//
 router.get('/create', productController.create);

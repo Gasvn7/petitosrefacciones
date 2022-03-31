@@ -12,9 +12,10 @@ const productController = {
 
     /* <  VISTA DE TODOS LOS PRODUCTOS >*/
     showPrdcts: (req, res) => {
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         res.render('products-views', {
             products
-        })
+        });
     },
     /* DETALLES DE UN PRODUCTO*/
     details: (req, res) => {
@@ -97,6 +98,13 @@ const productController = {
         fs.writeFileSync(productsFilePath, JSON.stringify(finalProd, null, ' '));
         res.redirect('/');
     },
+
+    list_destroy: (req, res) => {
+        let id = req.params.id;
+        let finalProd = products.filter(product => product.id != id);
+        fs.writeFileSync(productsFilePath, JSON.stringify(finalProd, null, ' '));
+        res.redirect('/products/list');
+    }
 }
 
 
