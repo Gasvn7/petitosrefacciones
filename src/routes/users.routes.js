@@ -2,6 +2,7 @@ const express = require('express');
 const multer = require('multer');
 const path = require('path');
 const router = express.Router();
+const { check } = require('express-validator');
 
 
 // MULTER //
@@ -28,7 +29,10 @@ router.get('/register',userController.register);
 router.post('/', upload.any(), userController.registration);
 
 router.get('/login',validationLogin, userController.login);
-
+router.post('/user-login',[
+    check('email').isEmail().withMessage('Tu correo no sirve'),
+    check('password').isLength({min: 6}).withMessage('La contraseña debe tener 6 letras')
+] ,userController.processLogin);
 
 
 
