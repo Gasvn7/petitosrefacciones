@@ -39,6 +39,7 @@ const userController = {
     },
 
     /* LOGIN */
+    
     login: (req, res) => {
         let errors = validationResult(req);
 
@@ -48,7 +49,15 @@ const userController = {
             res.render('user-login', { errors: errors.errors });
         }
     },
+        processLogin: (req, res) => {
 
+        let errors = validationResult(req);
+        if(errors.isEmpty()) {
+
+        } else{
+            return res.render('user-login', { errors: errors.errors });
+        }
+        }
 }
 
 
