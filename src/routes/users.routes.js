@@ -35,6 +35,12 @@ router.post('/user-login',[
 ] ,userController.processLogin);
 
 
-
+router.get('/check', function(req, res){
+    if (res.session.usuarioAdentro == undefined){
+        res.send("No podés entrar");
+    } else {
+        res.send("El usuario loguado es " + res.session.usuarioAdentro.email)
+    }
+})
 
 module.exports = router;

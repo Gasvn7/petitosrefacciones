@@ -57,7 +57,37 @@ const userController = {
         } else{
             return res.render('user-login', { errors: errors.errors });
         }
-        }
+        },
+        processLogin: function(req, res) {
+            let errors = validationResult(req);
+            if (errors.isEmpty()) {
+                let userJSON = fs.readFileSync('user.json', { encoding: 'utf-8' });
+                let users;
+                if (userJson == "") {
+                    users = [];
+                } else {
+                    users = JSON.parse(userJson)
+                }
+                for (let i = 0; i < users.length; i++){
+                    if(users[i]. email == req.params.email){
+                        if(bcrypt.compareSync(req.params.password, users[i].password)) {
+                            let usuarioAdentro = users[i];
+                            break;
+                        }
+                    }
+                }
+                if(usuarioAdentro == undefined){
+                    return res.render('login', { errors: 
+                    [
+                        {msg: 'No se pudo'}
+                    ] });
+                }
+                req.session.suarioAdentro = usuarioAdentro;
+                res.render('success');
+            } else { 
+                return res.render('login', { errors: errors.errors });
+            }
+        } 
 }
 
 
