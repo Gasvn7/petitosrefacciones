@@ -40,48 +40,6 @@ const userController = {
 
     /* LOGIN */
 
-    login: (req, res) => {
-        let errors = validationResult(req);
-
-        if (errors.isEmpty()) {
-            return res.send('La metiste');
-        } else {
-            res.render('user-login', { errors: errors.errors });
-        }
-    },
-    processLogin: function (req, res) {
-        let errors = validationResult(req);
-        if (errors.isEmpty()) {
-            /*  let userJSON = fs.readFileSync('user.json', { encoding: 'utf-8' }); */
-            let usuarios;
-            if (users == "") {
-                usuarios = [];
-            } else {
-                usuarios = users
-            }
-            let usuarioAdentro
-            for (let i = 0; i < usuarios.length; i++) {
-                if (usuarios[i].email == req.params.email) {
-                    if (bcrypt.compareSync(req.params.password, usuarios[i].password)) {
-                        usuarioAdentro = usuarios[i];
-                        break;
-                    }
-                }
-            }
-            if (usuarioAdentro == undefined) {
-                return res.render('user-login', {
-                    errors:
-                        [
-                            { msg: 'No se pudo' }
-                        ]
-                });
-            }
-            req.session.usuarioAdentro = usuarioAdentro;
-            res.render('/');
-        } else {
-            return res.render('login', { errors: errors.errors });
-        }
-    }
 }
 
 
