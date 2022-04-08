@@ -3,6 +3,7 @@ const multer = require('multer');
 const path = require('path');
 const router = express.Router();
 const { check } = require('express-validator');
+const session = require('express-session');
 
 
 // MULTER //
@@ -25,21 +26,22 @@ const validationLogin = require('../middleware/validationLogin.js')
 
 //* Routes *//
 // REGISTRO
-router.get('/register',userController.register);
+router.get('/register', userController.register);
 router.post('/', upload.any(), userController.registration);
 
-router.get('/login',validationLogin, userController.login);
-router.post('/user-login',[
+// LOGIN
+router.get('/login', validationLogin, userController.login);
+router.post('/login', [
     check('email').isEmail().withMessage('Tu correo no sirve'),
-    check('password').isLength({min: 6}).withMessage('La contraseña debe tener 6 letras')
-] ,userController.processLogin);
+    check('password').isLength({ min: 6 }).withMessage('La contraseña debe tener 6 letras')
+], userController.processLogin);
 
 
-router.get('/check', function(req, res){
-    if (res.session.usuarioAdentro == undefined){
-        res.send("No podés entrar");
+router.get('/check', function (req, res) {
+    if (res.session.usuarioAdentro == undefined) {
+        res.send("No podes entrar");
     } else {
-        res.send("El usuario loguado es " + res.session.usuarioAdentro.email)
+        res.send("El usuario ingresado es " + res.session.usuarioAdentro.email)
     }
 })
 
