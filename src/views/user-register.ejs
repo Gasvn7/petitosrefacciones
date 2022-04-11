@@ -1,45 +1,68 @@
-<%- include('./partials/head', {title: "Crea tu cuenta - Petitos Shop" }) %>
-    <%- include('partials/header') %>
-        <!----Formulario-Register-->
-        <main class="main-register-login">
-            <form action="/users" method="POST" enctype="multipart/form-data">
-                <div class="container">
-                    <h1>Registrarme</h1>
-                    <p>Por favor completa el formulario para registrarte.</p>
-                    <hr>
+<!----Formulario-Register-->
+<body>
+<main class="main-register-login">
 
-                    <label for="first-name"><b>¿Cuál es tu nombre?</b></label>
-                    <input class="input" type="text" placeholder="Tu nombre" name="first-name" id="first-name" required>
+    <form action="/users" method="POST" enctype="multipart/form-data">
 
-                    <label for="last-name"><b>¿Cuál es tu apellido?</b></label>
-                    <input class="input" type="text" placeholder="Tu apellido" name="last-name" id="last-name" required>
+        <div class="container">
+            <h1>Registrarme</h1>
+            <p>Por favor completa el formulario para registrarte.</p>
+            <hr>
 
-                    <label for="email"><b>Ingresa tu email</b></label>
-                    <input class="input" type="email" placeholder="pepito@hotmail.com" name="email" id="email" required>
-
-                    <label for="password"><b>Ingresa una contraseña</b></label>
-                    <input class="input" type="password" placeholder="Tu contraseña" name="password" id="password"
-                        required>
-
-                    <label for="image"><b>Foto de perfil</b></label>
-                    <input type="file" name="image" id="image">
-
-                    <p>Al crearte una cuenta aceptas los <a href="#" style="color:dodgerblue">Términos y
-                            condiciones.</a>
-                    </p>
-
-                    <div class="clearfix">
-                        <button class="login-button" type="submit" name="register">
-                            Crear cuenta
-                        </button>
-                        <a href="/users/login" class="register-button">
-                            Iniciar sesión
-                        </a>
-                    </div>
+            <label for="first-name"><b>¿Cuál es tu nombre?</b></label>
+            <input class="input" type="text" placeholder="Tu nombre" name="first_name" id="first_name"
+                class="form-control <%= locals.errors && errors.first_name ? 'is-invalid' : null %> ">
+            <% if (locals.errors && errors.first_name) { %>
+                <div class="text-danger">
+                    <%= errors.first_name.msg %>
                 </div>
-            </form>
-        </main>
-        <%- include('partials/footer') %>
-            </body>
+                <% } %>
+                    <label for="last-name"><b>¿Cuál es tu apellido?</b></label>
+                    <input class="input" type="text" placeholder="Tu apellido" name="last_name" id="last_name"
+                        class="form-control <%= locals.errors && errors.last_name ? 'is-invalid' : null %> ">
+                    <% if (locals.errors && errors.last_name) { %>
+                        <div class="text-danger">
+                            <%= errors.last_name.msg %>
+                        </div>
+                        <% } %>
+                            <label for="email"><b>Ingresa tu email</b></label>
+                            <input class="input" type="email" placeholder="pepito@hotmail.com" name="email" id="email"
+                                class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %> ">
+                            <% if (locals.errors && errors.email) { %>
+                                <div class="text-danger">
+                                    <%= errors.email.msg %>
+                                </div>
+                                <% } %>
+                                    <label for="password"><b>Ingresa una contraseña</b></label>
+                                    <input class="input" type="password" placeholder="Tu contraseña" name="password"
+                                        id="password"
+                                        class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %> ">
+                                    <% if (locals.errors && errors.password) { %>
+                                        <div class="text-danger">
+                                            <%= errors.password.msg %>
+                                        </div>
+                                        <% } %>
 
-            </html>
+                                            <label for="image"><b>Foto de perfil</b></label>
+                                            <input type="file" name="image" id="image">
+
+                                            <p>Al crearte una cuenta aceptas los <a href="#"
+                                                    style="color:dodgerblue">Términos y
+                                                    condiciones.</a>
+                                            </p>
+
+                                            <div class="clearfix">
+                                                <button class="login-button" type="submit">
+                                                    Crear cuenta
+                                                </button>
+                                                <a href="/users/login" class="register-button">
+                                                    Iniciar sesión
+                                                </a>
+                                            </div>
+        </div>
+    </form>
+</main>
+
+</body>
+
+</html>

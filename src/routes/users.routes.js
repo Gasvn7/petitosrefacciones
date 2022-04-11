@@ -21,12 +21,28 @@ var upload = multer({
 //* Controller Require *//
 const userController = require('../controllers/user.Controller.js')
 
+//* Middlewares *//
+// Para enviar los errores de validación al usuario
+const validation = require('../middleware/validation')
+// Para verificar si ya inicio sesión el usuario
+const guestMiddleware = require('../middleware/guestMiddleware')
+// Para verificar redirigir al login si no inició sesión
+const authMiddleware = require('../middleware/authMiddleware')
+
 //* Routes *//
 // REGISTRO
-router.get('/register', userController.register);
-router.post('/', upload.any(), userController.registration);
+router.get('/register', guestMiddleware, userController.register);
+router.post('/', upload.any(), validation, userController.registration);
 
 // LOGIN
-router.get('/login', userController.login);
+// Pendiente: Validar login ¿?
+router.get('/login', guestMiddleware, userController.login);
+router.post('/login', userController.loginProcess);
+
+// PERFIL
+router.get('/perfil/', authMiddleware, userController.profile);
+
+// LOGOUT
+router.post('/logout', userController.logout);
 
 module.exports = router;

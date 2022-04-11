@@ -17,6 +17,7 @@ app.set('view engine', 'ejs');
 
 
 //*MIDDLEWARES*//
+
 app.use(session({
   secret: 'Petitos',
   resave: false,
@@ -29,6 +30,9 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(methodOverride('_method'));
 
+//* MIDDLEWARE DE APLICACIÓN
+const userLoggedMiddleware = require('./middleware/userLoggedMiddleware')
+app.use(userLoggedMiddleware);
 
 //*ROUTES*//
 const mainRouter = require('./routes/main.routes');

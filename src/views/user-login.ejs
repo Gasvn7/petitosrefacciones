@@ -1,25 +1,26 @@
 <!----Formulario-login-->
 <main>
-  <% if ( typeof errors=='undefined' ) { %>
-    <p style="color: red">No se va a poder</p>
-    <ul>
-      <% for( let i=0; i < errors.length; i++ ) { %>
-        <li>
-          <%- errors[i].msg %>
-        </li>
-        <% } %>
-    </ul>
-    <% } %>
-      <form action="/users/login" method="POST">
 
-        <label for="email">Correo electrónico:</label>
-        <input type="email" name="email" id="email">
+  <form action="/users/login" method="POST">
 
+    <label for="email">Correo electrónico:</label>
+    <input type="email" name="email" id="email">
+    <% if (locals.errors && errors.email) { %>
+      <div class="text-danger">
+        <a href="/users/register">
+          <%= errors.email.msg %>
+        </a>
+      </div>
+      <% } %>
         <label for="password">Contraseña:</label>
-        <input type="password" name="password" id="password">
+        <input class="input" type="password" placeholder="Tu contraseña" name="password" id="password">
+
+        <label for="checkbox">
+          <input type="checkbox" class="checkbox" name="remember_user">Recordar mi usuario
+        </label>
 
         <button type="submit">Entrar</button>
-      </form>
+  </form>
 </main>
 </body>
 
